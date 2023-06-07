@@ -18,7 +18,7 @@ class CreateCollaboratorsTable extends Migration
             $table->string('name_collaborator',191)->nullable();
             $table->boolean('sexo_collaborator');
             $table->string('date_of_birth_collaborator',191);
-            $table->integer('ec');
+            $table->integer('ec_collaborator');
             $table->string('rshift_collaborator',191)->nullable();
             $table->string('ocupation_collaborator',191);
             $table->string('folio_collaborator',191)->unique();
