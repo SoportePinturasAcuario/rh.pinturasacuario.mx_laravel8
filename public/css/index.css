@@ -1,4 +1,4 @@
-* {
+*{
     margin: 0;
     padding: 0;
   }
@@ -18,7 +18,12 @@
     background: rgba(0, 115, 255, 0.497);
     border-radius: 10px;
   }
-  ul{
+  a:hover{
+    color: white;
+  }
+  ol, ul{
+    padding-left: 0px;
+    margin-bottom:0px;
     list-style: none;
   }
   p{
@@ -95,11 +100,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 10px;
+    padding: 10px 15px;
   }
   .nav_a .box-option i {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     margin: auto 19.25px auto 0px;
     transition: 0.5s;
     display: flex;
