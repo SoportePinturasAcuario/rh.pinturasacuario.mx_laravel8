@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\RH;
 
 use App\Models\RH\branchs;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class BranchsController extends Controller
@@ -14,7 +15,7 @@ class BranchsController extends Controller
      */
     public function index()
     {
-        $consulta = branchs::all();
+        return view('RH/branch/index');
     }
 
     /**
