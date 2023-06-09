@@ -5,6 +5,7 @@ namespace App\Http\Controllers\RH;
 use App\Models\RH\branchs;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class BranchsController extends Controller
 {
@@ -16,6 +17,15 @@ class BranchsController extends Controller
     public function index()
     {
         return view('RH/branch/index');
+    }
+    public function fetchbranch()
+    {
+        $branchs = branchs::orderBy('id_branch', 'DESC')
+            ->get();
+
+        return response()->json([
+            'branchs' => $branchs,
+        ]);
     }
 
     /**
@@ -36,7 +46,23 @@ class BranchsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|regex:/^[A-Z][A-Z,a-z, ,á,é,í,ó,ú]+$/'
+        ]);
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 400,
+                'errors' => $validator->messages(),
+            ]);
+        } else {
+            $branchs = new branchs;
+            $branchs->name_branch = $request->input('name');
+            $branchs->save();
+            return response()->json([
+                'status' => 200,
+                'message' => 'Sucursal registrada exitosamente',
+            ]);
+        }
     }
 
     /**
@@ -56,9 +82,20 @@ class BranchsController extends Controller
      * @param  \App\Models\RH\branchs  $branchs
      * @return \Illuminate\Http\Response
      */
-    public function edit(branchs $branchs)
+    public function edit($id)
     {
-        //
+        $branch = branchs::find($id);
+        if ($branch) {
+            return response()->json([
+                'status' => 200,
+                'branch' => $branch,
+            ]);
+        } else {
+            return response()->json([
+                'status' => 400,
+                'message' => 'Sucursal no encontrada',
+            ]);
+        }
     }
 
     /**
@@ -68,9 +105,32 @@ class BranchsController extends Controller
      * @param  \App\Models\RH\branchs  $branchs
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, branchs $branchs)
+    public function update(Request $request, $id)
     {
-        //
+        $validator = Validator::make($request->all(), [
+            'name' => 'required|regex:/^[A-Z][A-Z,a-z, ,á,é,í,ó,ú]+$/'
+        ]);
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => 400,
+                'errors' => $validator->messages(),
+            ]);
+        } else {
+            $branch = branchs::find($id);
+            if ($branch) {
+                $branch->name_branch = $request->input('name');
+                $branch->update();
+                return response()->json([
+                    'status' => 200,
+                    'messaje' => 'Editado correctamente',
+                ]);
+            } else {
+                return response()->json([
+                    'status' => 404,
+                    'message' => 'Registro no editado',
+                ]);
+            }
+        }
     }
 
     /**

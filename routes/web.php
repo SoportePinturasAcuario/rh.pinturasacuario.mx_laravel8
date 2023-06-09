@@ -18,4 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/departamentos', [BranchsController::class,'index'])->name('/branch');
+
+Route::get('/branch', [BranchsController::class,'index'])->name('/branch');
+
+Route::post('/addbranchs', [BranchsController::class,'store'])->name('/addbranchs');
+
+Route::get('/fetch-branch', [BranchsController::class,'fetchbranch'])->name('/fetch-branch');
+
+Route::get('/edit-branchs/{id}', [BranchsController::class,'edit'])->name('/edit-branchs/{id}');
+
+Route::post('/update-branch/{id}', [BranchsController::class,'update'])->name('/update-branch/{id}');
