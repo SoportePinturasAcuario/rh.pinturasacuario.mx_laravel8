@@ -27,4 +27,6 @@ Route::get('/fetch-branch', [BranchsController::class,'fetchbranch'])->name('/fe
 
 Route::get('/edit-branchs/{id}', [BranchsController::class,'edit'])->name('/edit-branchs/{id}');
 
-Route::post('/update-branch/{id}', [BranchsController::class,'update'])->name('/update-branch/{id}');
+Route::put('/update-branch/{id}', [BranchsController::class,'update'])->name('/update-branch/{id}');
+
+Route::delete('/delete-branch/{id}', [BranchsController::class,'destroy'])->name('/delete-branch/{id}');
