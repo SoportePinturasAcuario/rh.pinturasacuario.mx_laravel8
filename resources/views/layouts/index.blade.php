@@ -35,7 +35,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <a href="#" class="nav_a" title="Colaboradores">
+                            <a href="/collaborator" class="nav_a" title="Colaboradores">
                                 <div class="box-option">
                                     <div>
                                         <i class="fa-solid fa-user"></i>

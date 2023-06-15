@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\RH;
 
-use App\Models\RH\collaborators;
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
 class CollaboratorsController extends Controller
@@ -14,7 +14,7 @@ class CollaboratorsController extends Controller
      */
     public function index()
     {
-        //
+        return view('RH/collaborator/index');
     }
 
     /**
@@ -41,10 +41,10 @@ class CollaboratorsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\RH\collaborators  $collaborators
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(collaborators $collaborators)
+    public function show($id)
     {
         //
     }
@@ -52,10 +52,10 @@ class CollaboratorsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\RH\collaborators  $collaborators
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(collaborators $collaborators)
+    public function edit($id)
     {
         //
     }
@@ -64,10 +64,10 @@ class CollaboratorsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\RH\collaborators  $collaborators
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, collaborators $collaborators)
+    public function update(Request $request, $id)
     {
         //
     }
@@ -75,10 +75,10 @@ class CollaboratorsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\RH\collaborators  $collaborators
+     * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(collaborators $collaborators)
+    public function destroy($id)
     {
         //
     }
