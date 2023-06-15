@@ -117,12 +117,12 @@ class BranchsController extends Controller
             ]);
         } else {
             $branch = branchs::find($id);
-            if ($branch) {
+            if ($branch){
                 $branch->name_branch = $request->input('name');
                 $branch->update();
                 return response()->json([
                     'status' => 200,
-                    'messaje' => 'Editado correctamente',
+                    'message' => 'Editado correctamente',
                 ]);
             } else {
                 return response()->json([
@@ -139,8 +139,13 @@ class BranchsController extends Controller
      * @param  \App\Models\RH\branchs  $branchs
      * @return \Illuminate\Http\Response
      */
-    public function destroy(branchs $branchs)
+    public function destroy($id)
     {
-        //
+        $branch = branchs::find($id);
+        $branch ->delete();
+        return response()->json([
+            'status'=>200,
+            'message'=>'La sucursal se elimino',
+        ]);
     }
 }

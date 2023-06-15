@@ -12,13 +12,14 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Nueva sucuarsal</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close cancel" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <ul id="saveform_errList"></ul>
                 <div class="form-group mb-3">
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="" id="nombre" class="name form-control" placeholder="(Planta Lerma)">
+
+                    <label for="name">Nombre</label>
+                    <input type="text" name="" id="name" class="name form-control" placeholder="(Planta Lerma)">
                 </div>
             </div>
             <div class="modal-footer">
@@ -35,7 +36,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title" id="exampleModalLabel">Editar Sucuarsal</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close cancel" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <ul id="updateform_errList"></ul>
@@ -51,6 +52,23 @@
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary cancel" data-bs-dismiss="modal">Cancelar</button>
                 <button type="button" class="btn btn-warning update_branchs">Editar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal delete-->
+<div class="modal fade" id="DeleteBranchsModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4> ¿Deseas eliminar el registro? </h4>
+                <input type="hidden" id="delete_branch_id">
+                <button type="button" class="btn-close cancel" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary cancel" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-danger delete_branchs_btn">Eliminar</button>
             </div>
         </div>
     </div>
