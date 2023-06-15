@@ -11,8 +11,9 @@ $(document).ready(function () {
                 $.each(response.branchs, function (key, item) {
                     $('tbody').append(
                         '<tr>\
-                                    <td>' + item.name_branch + '</td>\
-                                    <td> <button value="'+ item.id_branch + '" class="edit_branchs"><i class="fa-solid fa-pen-to-square "></i></button><button value="' + item.id_branch + '" class="edit_branchs"><i class="fa-solid fa-trash"></i></button></td>\
+                                    <td class="col-1">' + item.id_branch + '</td>\
+                                    <td class="col-4">' + item.name_branch + '</td>\
+                                    <td class="col-3"> <button value="'+ item.id_branch + '" class="edit_branchs edit"><i class="fa-solid fa-pen-to-square "></i></button><button value="' + item.id_branch + '" class="edit_branchs delete"><i class="fa-solid fa-trash"></i></button></td>\
                             </tr>'
                     );
                 });

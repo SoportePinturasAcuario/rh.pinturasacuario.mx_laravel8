@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@200&family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
     <link rel="stylesheet" href="css/index.css">
+    @yield('head')
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://kit.fontawesome.com/a9e19848a9.js" crossorigin="anonymous"></script>
@@ -19,7 +20,7 @@
 </head>
 
 <body id="contend-body">
-    <header>
+    <header id="content-header">
         <div class="box-user">
             <div>
                 <div class="img-header">
@@ -198,7 +199,7 @@
             </nav>
         </div>
     </header>
-    <main>
+    <main id="content-main">
         <section class="conted-section">
             @yield('contend')
         </section>

@@ -1,4 +1,8 @@
 @extends('layouts.index')
+
+@section('head')
+<link rel="stylesheet" href="css/table.css">
+@endsection
 @section('contend')
 
 
@@ -13,8 +17,8 @@
             <div class="modal-body">
                 <ul id="saveform_errList"></ul>
                 <div class="form-group mb-3">
-                    <label for="">Nombre</label>
-                    <input type="text" name="" id="" class="name form-control" placeholder="(Planta Lerma)">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" name="" id="nombre" class="name form-control" placeholder="(Planta Lerma)">
                 </div>
             </div>
             <div class="modal-footer">
@@ -36,11 +40,11 @@
             <div class="modal-body">
                 <ul id="updateform_errList"></ul>
                 <div class="form-group mb-3">
-                    <label for="">ID</label>
+                    <label for="edit_branch_id">ID</label>
                     <input type="text" name="" id="edit_branch_id" class="name form-control" disabled>
                 </div>
                 <div class="form-group mb-3">
-                    <label for="">Nombre</label>
+                    <label for="edit_name">Nombre</label>
                     <input type="text" name="" id="edit_name" class="name form-control" placeholder="(Planta Lerma)">
                 </div>
             </div>
@@ -53,28 +57,99 @@
 </div>
 
 <!-- Tabla de reportes -->
-<div>
-    <div class="" id="success_message"></div> {{-- Notificacion de registro correcto --}}
-    <div class="card-header">
-        <h4>Reporte de Sucursales
-            {{-- Boton modal --}}
-            <a href="#" data-bs-toggle="modal" data-bs-target="#AddBranchsModel" class="btn btn-primary float-end btn-sm">
-                Nuevo
-            </a>
-            {{-- ----------- --}}
-
-        </h4>
+<div class="box-body">
+    <div class="box-table-reports ">
+        <div class="" id="success_message"></div>
+        {{-- Notificacion de registro correcto --}}
+        <div class="card-header">
+            <h4>Reporte de Sucursales
+                
+                </h4>
+                {{-- Boton modal --}}
+                <a href="#" data-bs-toggle="modal" data-bs-target="#AddBranchsModel" class="btn btn-primary float-end btn-sm">
+                    Nuevo
+                </a>
+                {{-- ----------- --}}
+        </div>
+        <table class="table">
+            <thead>
+                <tr class="table-primary">
+                    <td class="col-1">#</td>
+                    <td class="col-4">Nombre</td>
+                    <td class="col-3">Acciones</td>
+                </tr>
+            </thead>
+        </table>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <table class="table table-hover">
-        <thead>
-            <tr class="table-primary">
-                <td>Nombre</td>
-                <td>Acciones</td>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+    <div class="box-table-reports ">
+        <div class="" id="success_message"></div>
+        {{-- Notificacion de registro correcto --}}
+        <div class="card-header">
+            <h4>Reporte de Sucursales
+                
+                </h4>
+                {{-- Boton modal --}}
+                <a href="#" data-bs-toggle="modal" data-bs-target="#AddBranchsModel" class="btn btn-primary float-end btn-sm">
+                    Nuevo
+                </a>
+                {{-- ----------- --}}
+        </div>
+        <table class="table">
+            <thead>
+                <tr class="table-primary">
+                    <td class="col-1">#</td>
+                    <td class="col-4">Nombre</td>
+                    <td class="col-3">Acciones</td>
+                </tr>
+            </thead>
+        </table>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
 </div>
 @endsection
 @section('scripts')

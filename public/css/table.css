@@ -1,0 +1,45 @@
+.box-body{
+    min-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.box-table-reports{
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    min-width: 49%;
+    height: 100%;
+    /* overflow: scroll; */
+    background-color: white;
+    overflow: hidden;
+}
+.box-table-reports .card-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+.table {
+    margin: 0;
+}
+.table-responsive{
+    height: 83%;
+    overflow: auto;
+}
+tbody tr td button{
+    background: none;
+    margin-left: 12px;
+    margin-right: 12px;
+    padding: 2px;
+    border-radius: 5px;
+    transition: .3s;
+}
+tbody tr td .edit:hover{
+    background-color: rgba(255, 166, 0, 0.744);
+} 
+tbody tr td .delete:hover{
+    background-color: rgba(255, 0, 0, 0.744);
+}
+.box-table-reports > nav{
+    margin: auto;
+}
