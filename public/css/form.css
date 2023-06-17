@@ -1,0 +1,41 @@
+form{
+    width: 100%;
+}
+input{
+    width: 100%;
+    text-align: center;
+    text-overflow: ellipsis;
+    padding: 3px;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+.form-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    border-bottom: 1px solid black;
+    padding: 10px;
+    height: 8%;
+  
+}
+.form-head .key{
+    font-size: 15px;
+    text-align: center;
+}
+.container {
+    height: 92%;
+    overflow: auto;
+    /* background-color: aquamarine; */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.container .row{
+    /* background-color: beige; */
+    margin: 6px 0px;
+    justify-content: space-between;
+}
+.container .row .box-radio{
+    display: flex;
+    justify-content: space-around;
+}

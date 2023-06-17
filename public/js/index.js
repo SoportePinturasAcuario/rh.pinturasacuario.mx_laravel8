@@ -4,9 +4,11 @@ window.addEventListener('load', function () {
     var contend_header = document.getElementById('content-header');
     var contend_main = document.getElementById('content-main');
     contend_body.style.height = window.innerHeight + "px";
-    contend_header.style.height = window.innerHeight + "px";
 
+    contend_header.style.height = window.innerHeight + "px";
+    
     contend_main.style.height = window.innerHeight + "px";
+    
     window.addEventListener('resize', function () {
         function getBom() {
             contend_body.style.height = window.innerHeight + "px";

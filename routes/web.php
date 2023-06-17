@@ -34,3 +34,5 @@ Route::delete('/delete-branch/{id}', [BranchsController::class,'destroy'])->name
 
 // Rautas para colaboradores 
 Route::get('/collaborator',[CollaboratorsController::class,'index'])->name('/collaborator');
+
+Route::get('/collaborator-create',[CollaboratorsController::class,'create'])->name('/collaborator-create');

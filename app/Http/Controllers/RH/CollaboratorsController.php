@@ -24,7 +24,7 @@ class CollaboratorsController extends Controller
      */
     public function create()
     {
-        //
+        return view('RH/collaborator/create');
     }
 
     /**
