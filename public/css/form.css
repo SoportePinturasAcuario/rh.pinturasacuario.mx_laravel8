@@ -1,13 +1,17 @@
 form{
     width: 100%;
 }
-input{
-    width: 100%;
+hr{
+    color: rgb(0, 0, 0);
+    border: 2px solid;
+}
+input, select{
     text-align: center;
     text-overflow: ellipsis;
     padding: 3px;
     border-radius: 7px;
     border: 1px solid black;
+    margin: 0;
 }
 .form-head{
     display: flex;
@@ -30,12 +34,26 @@ input{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.container .row{
+.container .box-info{
+    background-color: rgba(162, 162, 162, 0.116);
+    margin: 20px 0px;
+    padding: 10px 0px;
+    border-radius: 5px;
+}
+.container .box-info .row{
     /* background-color: beige; */
     margin: 6px 0px;
-    justify-content: space-between;
 }
-.container .row .box-radio{
+.container .box-info .row h4{
+    text-align: left;
+    margin: 0;
+}
+.container .box-info .row .box-radio{
     display: flex;
     justify-content: space-around;
+}
+.container .row-end{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }

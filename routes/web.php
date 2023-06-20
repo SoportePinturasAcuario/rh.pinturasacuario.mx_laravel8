@@ -36,3 +36,5 @@ Route::delete('/delete-branch/{id}', [BranchsController::class,'destroy'])->name
 Route::get('/collaborator',[CollaboratorsController::class,'index'])->name('/collaborator');
 
 Route::get('/collaborator-create',[CollaboratorsController::class,'create'])->name('/collaborator-create');
+
+Route::post('/collaborator-add',[CollaboratorsController::class,'store'])->name('/collaborator-add');
