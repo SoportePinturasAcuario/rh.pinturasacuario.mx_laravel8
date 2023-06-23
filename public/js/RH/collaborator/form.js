@@ -1,5 +1,15 @@
 $(document).ready(function () {
 
+    var currentSalary = document.getElementById('current_salary');
+    var oldNominating = document.getElementById('nominating');
+    var newSdi = document.getElementById('sdi');
+    var weMoSalary = document.getElementById('weekly_or_monthly_salary');
+    var oldPantryVouchers = document.getElementById('pantry_vouchers');
+    var oldFund = document.getElementById('savings_fund');
+    var oldtotal = document.getElementById('total');
+    var dateEntry = document.getElementById('date_of_entry');
+    var oldAntiquity = document.getElementById('antiquity');
+    var numChildren = document.getElementById('children');
 
     //Calcula el SDI
     function sdi(currentSalary) {
@@ -24,41 +34,49 @@ $(document).ready(function () {
         oldFund.value = fund.toFixed(2);
         return oldFund.value;
     }
-    // Manda a llamar las funciones para calcular los valores con relacion al salario
-    function salary() {
-        switch (nominating(oldNominating)) {
-            case 'Semanal':
-                sdi(currentSalary);
-                //Calcula el salario s/m
-                weMoSalary.value = (currentSalary.value * 30).toFixed(2);
-                pantryVouchers(weMoSalary);
-                savingsFund(weMoSalary);
-                oldtotal.value = (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value)).toFixed(2);
-
-                break;
-            case '':
-                weMoSalary.value = '0.00';
-                oldPantryVouchers.value = '0.00';
-                oldFund.value = '0.00';
-                oldtotal.value = '0.00';
-                sdi(currentSalary);
-                break;
-            default:
-                sdi(currentSalary);
-                weMoSalary.value = (currentSalary.value * 30.42).toFixed(2);
-                pantryVouchers(weMoSalary);
-                savingsFund(weMoSalary);
-                oldtotal.value = (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value)).toFixed(2);
-
+    // Calcula la antiguedad
+    function newAntiquity(fecha) {
+        var register = new Date(fecha);
+        var date = new Date();
+        let newFecha = (date.toISOString().slice(0, 10).replace(/-/g, ",")).split(",");
+        let oldFecha = (register.toISOString().slice(0, 10).replace(/-/g, ",")).split(",");
+        if (newFecha[0] >= oldFecha[0]) {
+            if (newFecha[2] >= oldFecha[2] && newFecha[1] >= oldFecha[1]) {
+                var antiquity = (newFecha[0] - oldFecha[0]);
+                return antiquity;
+            } else {
+                var antiquity = 0;
+                return antiquity;
+            }
+        } else {
+            var antiquity = 0;
+            return antiquity;
         }
     }
-    var currentSalary = document.getElementById('current_salary');
-    var oldNominating = document.getElementById('nominating');
-    var newSdi = document.getElementById('sdi');
-    var weMoSalary = document.getElementById('weekly_or_monthly_salary');
-    var oldPantryVouchers = document.getElementById('pantry_vouchers');
-    var oldFund = document.getElementById('savings_fund');
-    var oldtotal = document.getElementById('total');
+    // Manda a llamar las funciones para calcular los valores con relacion al salario
+    function salary() {
+        if (nominating(oldNominating) != "") {
+            sdi(currentSalary);
+            weMoSalary.value = (currentSalary.value * 30.42).toFixed(2);
+            pantryVouchers(weMoSalary);
+            savingsFund(weMoSalary);
+            oldtotal.value = (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value)).toFixed(2);
+        } else {
+            weMoSalary.value = '0.00';
+            oldPantryVouchers.value = '0.00';
+            oldFund.value = '0.00';
+            oldtotal.value = '0.00';
+            sdi(currentSalary);
+        }
+    }
+    function createInputs(){
+
+    }
+    numChildren.onchange = function (){
+        var numHijos = numChildren.value;
+        console.log(numHijos); 
+        
+    };
     // Detecta los cambios dentro de Salarioactual
     currentSalary.onchange = function () {
         salary();
@@ -67,8 +85,7 @@ $(document).ready(function () {
     oldNominating.onchange = function () {
         salary();
     };
-    // Obtiene las fechas de inicio, evaluacion y fin de contrato
-    var dateEntry = document.getElementById('date_of_entry');
+    // Detecta los cambios en la fecha de inicio ,genera las fechas de evaluacion y fin de contrato
     dateEntry.onchange = function () {
         let start_contract = document.getElementById('start_of_contract');
         start_contract.value = dateEntry.value;
@@ -76,15 +93,18 @@ $(document).ready(function () {
         // Obtener la fecha para evaluacion de 30 dias
         let newFecha = new Date(fecha);
         newFecha.setDate(newFecha.getDate() + 30);
-        let editFecha = newFecha.toISOString().slice(0, 10).replace(/-/g, "-");
+        let editFecha = newFecha.toISOString().slice(0, 10);
         let dayEvaluation = document.getElementById('day_evaluation');
         dayEvaluation.value = editFecha;
         // Obtener la fecha para fin de contrato
         let endFecha = new Date(fecha);
         endFecha.setDate(endFecha.getDate() + 90);
-        let editFechaEnd = endFecha.toISOString().slice(0, 10).replace(/-/g, "-");
+        let editFechaEnd = endFecha.toISOString().slice(0, 10);
         let endContract = document.getElementById('end_of_contract');
         endContract.value = editFechaEnd;
+
+        //obtiene los años de antiguedad
+        oldAntiquity.value = newAntiquity(fecha);
     };
 });
 

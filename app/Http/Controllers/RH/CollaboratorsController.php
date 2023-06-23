@@ -37,7 +37,14 @@ class CollaboratorsController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'key'=>'required'
+            'Clave'=>'required|regex:/^[A-Z][A-Z,a-z, ,á,é,í,ó,ú]+$/',
+            'Nombre_del_empleado'=>'required|regex:/^[A-Z][A-Z,a-z, ,á,é,í,ó,ú]+$/',
+            'Edad'=>'required',
+            'Sexo'=>'required',
+            'Lugar_de_nacimiento'=>'required',
+            'Fecha_de_nacimiento'=>'required',
+            'Escolaridad'=>'required',
+            'Telefono'=>'required',
         ]);
         if($validator->fails()){
             return response()->json([

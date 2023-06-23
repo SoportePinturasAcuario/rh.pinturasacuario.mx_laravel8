@@ -35,17 +35,17 @@
                         <input class="form-control" type="text" name="age" id="age">
                     </div>
                     <div class="col-md-3">
-                        <label for="colony">Sexo</label>
+                        <label for="sex">Sexo</label>
                         <div class="box-radio">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="sex" id="sexo1" value="masculino">
-                                <label class="form-check-label" for="sexo1">
+                                <input class="form-check-input" type="radio" name="sex" id="sex1" value="H">
+                                <label class="form-check-label" for="sex1">
                                     Masculino
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="sex" id="sexo2" value="femenino">
-                                <label class="form-check-label" for="sexo2">
+                                <input class="form-check-input" type="radio" name="sex" id="sex2" value="M">
+                                <label class="form-check-label" for="sex2">
                                     Femenino
                                 </label>
                             </div>
@@ -110,7 +110,7 @@
                             <option value="">Selecciona una opción</option>
                             <option value="Casado(a)">Casado(a)</option>
                             <option value="Soltero(a)">Soltero(a)</option>
-                            <option value="Union_libre">Union_libre</option>
+                            <option value="Union libre">Union libre</option>
                         </select>
                     </div>
 
