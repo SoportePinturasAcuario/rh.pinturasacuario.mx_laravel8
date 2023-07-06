@@ -1,5 +1,10 @@
 $(document).ready(function () {
 
+
+
+
+
+
     var currentSalary = document.getElementById('current_salary');
     var oldNominating = document.getElementById('nominating');
     var newSdi = document.getElementById('sdi');
@@ -9,7 +14,9 @@ $(document).ready(function () {
     var oldtotal = document.getElementById('total');
     var dateEntry = document.getElementById('date_of_entry');
     var oldAntiquity = document.getElementById('antiquity');
-    var numChildren = document.getElementById('children');
+    var ageCollaborator = document.getElementById('age');
+    var dateBirth = document.getElementById('date_of_birth');
+    var daily = document.getElementById('daily_wage_imss_more_assimilated');
 
     //Calcula el SDI
     function sdi(currentSalary) {
@@ -34,8 +41,8 @@ $(document).ready(function () {
         oldFund.value = fund.toFixed(2);
         return oldFund.value;
     }
-    // Calcula la antiguedad
-    function newAntiquity(fecha) {
+    // Calcula los años
+    function calculateYears(fecha) {
         var register = new Date(fecha);
         var date = new Date();
         let newFecha = (date.toISOString().slice(0, 10).replace(/-/g, ",")).split(",");
@@ -45,8 +52,13 @@ $(document).ready(function () {
                 var antiquity = (newFecha[0] - oldFecha[0]);
                 return antiquity;
             } else {
-                var antiquity = 0;
-                return antiquity;
+                var antiquity = ((newFecha[0] - oldFecha[0])-1);
+                if(antiquity>=0){
+                    return antiquity;
+                }else{
+                    antiquity=0;
+                    return antiquity;
+                }
             }
         } else {
             var antiquity = 0;
@@ -60,32 +72,32 @@ $(document).ready(function () {
             weMoSalary.value = (currentSalary.value * 30.42).toFixed(2);
             pantryVouchers(weMoSalary);
             savingsFund(weMoSalary);
-            oldtotal.value = (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value)).toFixed(2);
+            oldtotal.value = (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value) + Number(oldtotal.value)).toFixed(2);
+            daily.value = (weMoSalary.value/30).toFixed(2);
         } else {
             weMoSalary.value = '0.00';
             oldPantryVouchers.value = '0.00';
             oldFund.value = '0.00';
             oldtotal.value = '0.00';
+            daily.value = '0.00';
             sdi(currentSalary);
         }
     }
-    function createInputs(){
 
-    }
-    numChildren.onchange = function (){
-        var numHijos = numChildren.value;
-        console.log(numHijos); 
-        
+    dateBirth.onchange = function(){
+        ageCollaborator.value = calculateYears(dateBirth.value);
     };
+
     // Detecta los cambios dentro de Salarioactual
     currentSalary.onchange = function () {
         salary();
     };
-    //Detecta los cambios en la seleccion de nomina
+    // //Detecta los cambios en la seleccion de nomina
     oldNominating.onchange = function () {
         salary();
     };
-    // Detecta los cambios en la fecha de inicio ,genera las fechas de evaluacion y fin de contrato
+
+    // // Detecta los cambios en la fecha de inicio ,genera las fechas de evaluacion y fin de contrato
     dateEntry.onchange = function () {
         let start_contract = document.getElementById('start_of_contract');
         start_contract.value = dateEntry.value;
@@ -102,10 +114,11 @@ $(document).ready(function () {
         let editFechaEnd = endFecha.toISOString().slice(0, 10);
         let endContract = document.getElementById('end_of_contract');
         endContract.value = editFechaEnd;
-
         //obtiene los años de antiguedad
-        oldAntiquity.value = newAntiquity(fecha);
+        oldAntiquity.value = calculateYears(fecha);
     };
+
+
 });
 
 

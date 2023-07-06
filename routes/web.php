@@ -38,3 +38,5 @@ Route::get('/collaborator',[CollaboratorsController::class,'index'])->name('/col
 Route::get('/collaborator-create',[CollaboratorsController::class,'create'])->name('/collaborator-create');
 
 Route::post('/collaborator-add',[CollaboratorsController::class,'store'])->name('/collaborator-add');
+
+Route::get('/fech',[CollaboratorsController::class,'fechcollaborators'])->name('/fech');

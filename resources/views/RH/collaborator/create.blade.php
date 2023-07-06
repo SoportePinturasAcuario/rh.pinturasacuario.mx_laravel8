@@ -6,7 +6,7 @@
 <div class="box-body">
     <form>
         <div class="form-head">
-            <div></div>
+            <div><input type="button" onclick="history.back()" name="volver atrás" value="volver atrás"></div>
             <h2>Alta de colaborador</h2>
             <div class="col-md-1 key">
                 <label for="key">Clave</label>
@@ -32,10 +32,10 @@
 
                     <div class="col-md-1">
                         <label for="age">Edad</label>
-                        <input class="form-control" type="text" name="age" id="age">
+                        <input class="form-control" type="text" name="age" id="age" disabled>
                     </div>
                     <div class="col-md-3">
-                        <label for="sex">Sexo</label>
+                        <label >Sexo</label>
                         <div class="box-radio">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="sex" id="sex1" value="H">
@@ -76,7 +76,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <label for="street_number">Calle Numero</label>
+                        <label for="street_number">Calle y Numero</label>
                         <input class="form-control" type="text" name="street_number" id="street_number">
                     </div>
                     <div class="col-md-3">
@@ -319,7 +319,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <label for="dossier">Estatus expediente</label>
+                        <label>Estatus expediente</label>
                         <div class="box-radio">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="dossier" id="dossier1" value="existe">
@@ -336,8 +336,8 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="new_ci">CI nuevo</label>
-                        <div class="box-radio">
+                        <label >CI nuevo</label>
+                        <div class="box-radio" >
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="new_ci" id="new_ci1" value="si">
                                 <label class="form-check-label" for="new_ci1">
@@ -359,12 +359,12 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <label for="pantry_vouchers">Vales de despensa</label>
-                        <input class="form-control" type="text" name="pantry_vouchers" id="pantry_vouchers">
+                        <label for="pantry_voucher_two">Vales de despensa</label>
+                        <input class="form-control" type="text" name="pantry_voucher_two" id="pantry_voucher_two">
                     </div>
                     <div class="col-md-3">
-                        <label for="savings_fund">Fondo de ahorro</label>
-                        <input class="form-control" type="text" name="savings_fund" id="savings_fund">
+                        <label for="savings_fund_two">Fondo de ahorro</label>
+                        <input class="form-control" type="text" name="savings_fund_two" id="savings_fund_two">
                     </div>
                     <div class="col-md-3">
                         <label for="assimilated">Asimilados</label>
@@ -372,7 +372,7 @@
                     </div>
                     <div class="col-md-3">
                         <label for="daily_wage_imss_more_assimilated">Salario diario IMMS + asimilado </label>
-                        <input class="form-control" type="text" name="daily_wage_imss_more_assimilated" id="daily_wage_imss_more_assimilated">
+                        <input class="form-control" type="text" name="daily_wage_imss_more_assimilated" id="daily_wage_imss_more_assimilated" disabled>
                     </div>
                     <div class="col-md-3">
                         <label for="hc">HC</label>
@@ -400,6 +400,7 @@
 
                 </div>
             </div>
+         
             <div class="row row-end">
                 <div class="col-md-4">
                     <label for="recruiter">Reclutador</label>

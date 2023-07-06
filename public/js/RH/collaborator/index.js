@@ -25,8 +25,9 @@ $(document).ready(function () {
             'CURP': $("#curp").val(),
             'Credito_infonavit': $("#credit_infonavit").val(),
             'Monto': $("#amount").val(),
+            //Informacion del puesto            
             'Puesto': $("#stand").val(),
-            'Departamento': $('#department').val(),
+            'Departamento': $("#department").val(),
             'Responde_a': $('#supervise').val(),
             'Actividad': $('#activity').val(),
             'Nomina': $('#nominating').val(),
@@ -38,12 +39,12 @@ $(document).ready(function () {
             'Fondo_de_ahorro': $('#savings_fund').val(),
             'Asimilado': $('#assimilated').val(),
             'Total': $('#total').val(),
-            'Fecha_de_ingreso':$('#date_of_entry').val(),
-            'Inicio_de_contrato':$('#start_of_contract').val(),
-            'Dias_contrato':$('#contracted_days').val(),
-            'Evaluación_30_días':$('#day_evaluation').val(),
-            'Días_contratado':$('#contracted_days_two').val(),
-            'Fin_de_contrato':$('#end_of_contract').val(),
+            'Fecha_de_ingreso': $('#date_of_entry').val(),
+            'Inicio_de_contrato': $('#start_of_contract').val(),
+            'Dias_contrato': $('#contracted_days').val(),
+            'Evaluación_30_días': $('#day_evaluation').val(),
+            'Días_contratado': $('#contracted_days_two').val(),
+            'Fin_de_contrato': $('#end_of_contract').val(),
             'Antiguedad': $('#antiquity').val(),
             'N_Posición': $('#n_position').val(),
             'Sustituye_a': $('#replaces').val(),
@@ -54,8 +55,8 @@ $(document).ready(function () {
             'Estatus_del_expediente': $("[name=dossier]:checked").val(),
             'CI_nuevo': $("[name=new_ci]:checked").val(),
             'avc': $('#avc').val(),
-            'Vales_de_despensa': $('#pantry_vouchers').val(),
-            'Fondo_de_ahorro': $('#savings_fund').val(),
+            'Vales_de_despensa_two': $('#pantry_voucher_two').val(),
+            'Fondo_de_ahorro_two': $('#savings_fund_two').val(),
             'Asimilados': $('#assimilated').val(),
             'Salario_diario_IMMS_+_asimilado': $('#daily_wage_imss_more_assimilated').val(),
             'HC': $('#hc').val(),
@@ -81,23 +82,22 @@ $(document).ready(function () {
                         toast: true,
                         position: 'top-end',
                         showConfirmButton: false,
-                        timer: 3000,
+                        timer: 1000,
                         timerProgressBar: true,
                         didOpen: (toast) => {
-                          toast.addEventListener('mouseenter', Swal.stopTimer)
-                          toast.addEventListener('mouseleave', Swal.resumeTimer)
+                            toast.addEventListener('mouseenter', Swal.stopTimer)
+                            toast.addEventListener('mouseleave', Swal.resumeTimer)
                         }
-                      })
-                      
-                      Toast.fire({
+                    })
+                    Toast.fire({
                         icon: 'warning',
                         title: errores,
-                      })
+                    })
                 } else {
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
-                        title: "La sucursal " + data.name + " se registro exitosamente.",
+                        title: "El colaborador " + data.name + " se registro exitosamente.",
                         showConfirmButton: false,
                         timer: 1500
                     });
