@@ -123,6 +123,9 @@
                         <input class="form-control" type="text" name="children" id="children">
                     </div>
                 </div>
+                <div class="row" id="row_children">
+                    
+                </div>
             </div>
             <div class="box-info">
                 <!-- documentacion -->

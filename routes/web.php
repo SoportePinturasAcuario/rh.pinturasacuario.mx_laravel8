@@ -15,9 +15,9 @@ use App\Http\Controllers\RH\CollaboratorsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Rutas para sucursales
 Route::get('/branch', [BranchsController::class,'index'])->name('/branch');
@@ -33,7 +33,7 @@ Route::put('/update-branch/{id}', [BranchsController::class,'update'])->name('/u
 Route::delete('/delete-branch/{id}', [BranchsController::class,'destroy'])->name('/delete-branch/{id}');
 
 // Rautas para colaboradores 
-Route::get('/collaborator',[CollaboratorsController::class,'index'])->name('/collaborator');
+Route::get('/',[CollaboratorsController::class,'index'])->name('/collaborator');
 
 Route::get('/collaborator-create',[CollaboratorsController::class,'create'])->name('/collaborator-create');
 

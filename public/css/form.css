@@ -12,7 +12,11 @@ input, select{
     border-radius: 7px;
     border: 1px solid black;
     margin: 0;
+    /* text-transform: uppercase; */
+
 }
+
+
 .form-head{
     display: flex;
     justify-content: space-between;

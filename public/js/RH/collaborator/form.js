@@ -1,10 +1,5 @@
 $(document).ready(function () {
 
-
-
-
-
-
     var currentSalary = document.getElementById('current_salary');
     var oldNominating = document.getElementById('nominating');
     var newSdi = document.getElementById('sdi');
@@ -17,17 +12,19 @@ $(document).ready(function () {
     var ageCollaborator = document.getElementById('age');
     var dateBirth = document.getElementById('date_of_birth');
     var daily = document.getElementById('daily_wage_imss_more_assimilated');
-
+    var oldAsimilated = document.getElementById('asimilated');
     //Calcula el SDI
     function sdi(currentSalary) {
         let numSdi = (currentSalary.value * 1.04932);
+        // Toma los 2 numeros siguientes despues del punto
         newSdi.value = numSdi.toFixed(2);
         return newSdi.value;
     }
-    //Regresa el tipo de nomina seleccionada
-    function nominating(oldNominating) {
-        let valor = oldNominating.value;
-        return valor;
+    //Calcula el sueldo mensual
+    function current(currentSalary){
+        let new_weMoSalary = (currentSalary.value * 30);
+        weMoSalary.value = new_weMoSalary.toFixed(2);
+        return weMoSalary.value;
     }
     //Calcula los valos de despensa
     function pantryVouchers(weMoSalary) {
@@ -41,6 +38,20 @@ $(document).ready(function () {
         oldFund.value = fund.toFixed(2);
         return oldFund.value;
     }
+    
+    function total(weMoSalary, oldPantryVouchers,oldFund,oldAsimilated){
+        let all =  (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value)).toFixed(2);
+        oldtotal.value = all.toFixed(2);
+        return oldtotal.value;
+    }
+
+    //Regresa el tipo de nomina seleccionada
+    // function nominating(oldNominating) {
+    //     let valor = oldNominating.value;
+    //     return valor;
+    // }
+    
+
     // Calcula los años
     function calculateYears(fecha) {
         var register = new Date(fecha);
@@ -52,11 +63,11 @@ $(document).ready(function () {
                 var antiquity = (newFecha[0] - oldFecha[0]);
                 return antiquity;
             } else {
-                var antiquity = ((newFecha[0] - oldFecha[0])-1);
-                if(antiquity>=0){
+                var antiquity = ((newFecha[0] - oldFecha[0]) - 1);
+                if (antiquity >= 0) {
                     return antiquity;
-                }else{
-                    antiquity=0;
+                } else {
+                    antiquity = 0;
                     return antiquity;
                 }
             }
@@ -67,13 +78,13 @@ $(document).ready(function () {
     }
     // Manda a llamar las funciones para calcular los valores con relacion al salario
     function salary() {
-        if (nominating(oldNominating) != "") {
+        if (currentSalary.value != "") {
             sdi(currentSalary);
-            weMoSalary.value = (currentSalary.value * 30.42).toFixed(2);
+            current(currentSalary);
             pantryVouchers(weMoSalary);
             savingsFund(weMoSalary);
-            oldtotal.value = (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value) + Number(oldtotal.value)).toFixed(2);
-            daily.value = (weMoSalary.value/30).toFixed(2);
+            total(weMoSalary, oldPantryVouchers,oldFund,oldAsimilated);
+            daily.value = (weMoSalary.value / 30).toFixed(2);
         } else {
             weMoSalary.value = '0.00';
             oldPantryVouchers.value = '0.00';
@@ -84,12 +95,12 @@ $(document).ready(function () {
         }
     }
 
-    dateBirth.onchange = function(){
+    dateBirth.onchange = function () {
         ageCollaborator.value = calculateYears(dateBirth.value);
     };
 
     // Detecta los cambios dentro de Salarioactual
-    currentSalary.onchange = function () {
+    currentSalary.oninput = function () {
         salary();
     };
     // //Detecta los cambios en la seleccion de nomina
