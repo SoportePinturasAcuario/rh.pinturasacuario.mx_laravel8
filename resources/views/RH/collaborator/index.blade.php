@@ -1,25 +1,58 @@
 @extends('layouts/index')
+
 @section('head')
-<link rel="stylesheet" href="css/table.css">
+@endsection
+@section('title')
+<div class="title">
+  <h3>Colaboradores</h3>
+</div>
+<div class="bt-new">
+  <a href="/collaborator-create">
+    <button class="btn btn-primary">Nuevo</button>
+  </a>
+</div>
 @endsection
 @section('contend')
-
-<!-- Tabla de reportes -->
-<div class="box-body">
-    <div class="box-table-report">
-        <div class="" id="success_message"></div>
-        {{-- Notificacion de registro correcto --}}
-        <div class="card-header">
-            <p class="accountant">Listado de colaboradores :</p>
-            <h3>Colaboradores</h3>
-                {{-- Boton modal --}}
-                <a href="/collaborator-create" class="btn btn-primary float-end btn-sm">
-                    Nuevo Registro
-                </a>
-                {{-- ----------- --}}
-        </div>
-    </div>
-
-</div>
-
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item disabled">
+      <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#">Next</a>
+    </li>
+  </ul>
+</nav>
 @endsection

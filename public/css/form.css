@@ -1,65 +1,62 @@
-form{
-    width: 100%;
-}
-hr{
-    color: rgb(0, 0, 0);
-    border: 2px solid;
-}
-input, select{
-    text-align: center;
-    text-overflow: ellipsis;
-    padding: 3px;
-    border-radius: 7px;
-    border: 1px solid black;
-    margin: 0;
-    /* text-transform: uppercase; */
-
-}
-
-
-.form-head{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-radius: 10px;
-    border-bottom: 1px solid black;
-    padding: 10px;
-    height: 8%;
-  
-}
-.form-head .key{
-    font-size: 15px;
+input{
     text-align: center;
 }
-.container {
-    height: 92%;
-    overflow: auto;
-    /* background-color: aquamarine; */
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.container .box-info{
-    background-color: rgba(162, 162, 162, 0.116);
-    margin: 20px 0px;
-    padding: 10px 0px;
-    border-radius: 5px;
-}
-.container .box-info .row{
-    /* background-color: beige; */
-    margin: 6px 0px;
-    align-items: flex-end;
-
-}
-.container .box-info .row h4{
-    text-align: left;
-    margin: 0;
-}
-.container .box-info .row .box-radio{
+form .container .row .inputbox, .box-radio{
     display: flex;
     justify-content: space-around;
+    height: 30px;
 }
-.container .row-end{
+form .container .row .inputbox div{
     display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    background-color: gray;
+    color: white;
+}
+form .container .row .inputbox .input-control{
+    border-radius: 0px 5px 5px 0px;
+    text-overflow: ellipsis;
+    padding: 0px 5px;
+}
+form .container .row .inputbox .dis-input-control{
+    border-radius: 5px;
+    text-overflow: ellipsis;
+    padding: 0px 5px;
+}
+form .container .row .inputbox .input-control:focus, .dis-input-control:focus{
+    border: 1px solid rgb(0, 147, 0);
+    box-shadow: 1px 0px 1px 1px green;
+}
+form .container .nav-title{
+    background-color: cadetblue;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: flex-end;
+}
+form .container .box-inputs{
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 1px rgba(128, 128, 128, 0.613);
+    padding: 10px;
+    height: auto;
+}
+form .container .box-inputs-incative{
+    background-color: rgb(111, 119, 119);
+    overflow: hidden;
+    padding: 5px 10px;
+    height: 0px;
+}
+form .container .row>.item-title{
+    color: white;
+    display: flex;
+    align-items: center;
+    width: auto;
+}
+
+form .container .row>.item-title i{
+    cursor: pointer;
+}
+form .container .row>.item-title i:hover{
+    color:black;
 }

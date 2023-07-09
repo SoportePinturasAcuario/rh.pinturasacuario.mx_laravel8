@@ -1,5 +1,35 @@
 $(document).ready(function () {
 
+    var option = document.getElementById('option');
+    var box_one = document.getElementById('box-one');
+    option.addEventListener("click", function () {
+        if (box_one.className == "box-inputs") {
+            box_one.className = "box-inputs-incative";
+            option.className = "fa-solid fa-plus";
+        } else {
+            box_one.className = "box-inputs";
+            option.className = "fa-solid fa-minus";
+        }
+    });
+
+    var option_two = document.getElementById('option-two');
+    var box_two = document.getElementById('box-two');
+    option_two.addEventListener("click", function () {
+        if (box_two.className == "box-inputs") {
+            box_two.className = "box-inputs-incative";
+            option_two.className = "fa-solid fa-plus";
+        } else {
+            box_two.className = "box-inputs";
+            option_two.className = "fa-solid fa-minus";
+        }
+    });
+
+
+
+
+
+
+
     var currentSalary = document.getElementById('current_salary');
     var oldNominating = document.getElementById('nominating');
     var newSdi = document.getElementById('sdi');
