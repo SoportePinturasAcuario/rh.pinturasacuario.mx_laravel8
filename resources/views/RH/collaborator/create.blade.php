@@ -17,8 +17,7 @@
                     <h4>Datos del colaborador</h4>
                 </div>
                 <div class="options item-title">
-                    <i class="fa-solid fa-minus" id="option"></i>
-                    <!-- <i class="fa-solid fa-plus"></i> -->
+                    <i class="fa-solid fa-plus" id="option"></i>
                 </div>
             </div>
             <div class="box-inputs" id="box-one">
@@ -277,8 +276,7 @@
                     <h4>Información de su trabajo</h4>
                 </div>
                 <div class="options item-title">
-                    <i class="fa-solid fa-minus" id="option-two"></i>
-                    <!-- <i class="fa-solid fa-plus"></i> -->
+                    <i class="fa-solid fa-plus" id="option-two"></i>
                 </div>
             </div>
             <div class="box-inputs" id="box-two">

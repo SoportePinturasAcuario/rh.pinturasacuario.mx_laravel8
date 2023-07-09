@@ -5,10 +5,10 @@ $(document).ready(function () {
     option.addEventListener("click", function () {
         if (box_one.className == "box-inputs") {
             box_one.className = "box-inputs-incative";
-            option.className = "fa-solid fa-plus";
+            option.className = "fa-solid fa-minus";
         } else {
             box_one.className = "box-inputs";
-            option.className = "fa-solid fa-minus";
+            option.className = "fa-solid fa-plus";
         }
     });
 
@@ -17,10 +17,10 @@ $(document).ready(function () {
     option_two.addEventListener("click", function () {
         if (box_two.className == "box-inputs") {
             box_two.className = "box-inputs-incative";
-            option_two.className = "fa-solid fa-plus";
+            option_two.className = "fa-solid fa-minus";
         } else {
             box_two.className = "box-inputs";
-            option_two.className = "fa-solid fa-minus";
+            option_two.className = "fa-solid fa-plus";
         }
     });
 

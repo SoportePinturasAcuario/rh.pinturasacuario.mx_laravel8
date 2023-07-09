@@ -37,15 +37,13 @@ form .container .nav-title{
 }
 form .container .box-inputs{
     overflow: hidden;
-    box-shadow: 0px 0px 0px 1px rgba(128, 128, 128, 0.613);
-    padding: 10px;
-    height: auto;
-}
-form .container .box-inputs-incative{
-    background-color: rgb(111, 119, 119);
-    overflow: hidden;
     padding: 5px 10px;
     height: 0px;
+}
+form .container .box-inputs-incative{
+    overflow: hidden;
+    padding: 10px;
+    height: auto;
 }
 form .container .row>.item-title{
     color: white;
