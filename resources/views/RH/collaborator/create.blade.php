@@ -48,13 +48,13 @@
                         <label>Sexo</label>
                         <div class="box-radio">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="sex" id="sex1" value="H">
+                                <input class="form-check-input" type="radio" name="sex" id="sex1" value="Masculino" >
                                 <label class="form-check-label" for="sex1">
                                     M
                                 </label>
                             </div>
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="sex" id="sex2" value="M">
+                                <input class="form-check-input" type="radio" name="sex" id="sex2" value="Femenino">
                                 <label class="form-check-label" for="sex2">
                                     F
                                 </label>
@@ -199,14 +199,14 @@
                             <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad">
                         </div>
                     </div>
-                    <div class="col-md-1">
+                    <!-- <div class="col-md-1">
                         <label for="children">Hijos 2</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
 
                             </div>
-                            <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad">
+                            <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad2">
                         </div>
                     </div>
                     <div class="col-md-1">
@@ -216,9 +216,9 @@
                                 <i class="fa-solid fa-user"></i>
 
                             </div>
-                            <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad">
+                            <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad3">
                         </div>
-                    </div>
+                    </div> -->
 
                 </div>
                 <div class="row">
@@ -282,16 +282,7 @@
             <div class="box-inputs" id="box-two">
 
                 <div class="row">
-                    <div class="col-md-2 key">
-                        <label for="">Clave</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-key"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="key" id="key" placeholder="Clave*">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="stand">Puesto</label>
                         <div class="inputbox">
                             <div>
@@ -300,25 +291,7 @@
                             <input class="form-control input-control" type="text" name="stand" id="stand">
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <label for="department">Departamento</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-city"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="department" id="department">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="supervise">Responde a</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="supervise" id="supervise">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
+                    <div class="col-md-4">
                         <label for="activity">Actividad</label>
                         <div class="inputbox">
                             <div>
@@ -327,25 +300,18 @@
                             <input class="form-control input-control" type="text" name="activity" id="activity">
                         </div>
                     </div>
-                </div>
-                <div class="row">
+
                     <div class="col-md-4">
-                        <label for="nominating">Nomina</label>
+                        <label for="replaces">Sustituye a</label>
                         <div class="inputbox">
                             <div>
-                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                                <i class="fa-solid fa-user"></i>
                             </div>
-                            <select class="form-control input-control" name="nominating" id="nominating">
-                                <option value="">Selecciona una opción</option>
-                                <option value="Semanal">Semanal</option>
-                                <option value="QS QUIMERA SOLUTIONS, S.A. DE C.V.">QS QUIMERA SOLUTIONS, S.A. DE C.V.</option>
-                                <option value="Quincenal">Quincenal</option>
-                                <option value="Quincenal_Admin">Quincenal Admin</option>
-                                <option value="QUINCENAL_QS_SOLUTIONS">QUINCENAL QS SOLUTIONS</option>
-                                <option value="Factura">Factura</option>
-                            </select>
+                            <input class="form-control input-control" type="text" name="replaces" id="replaces">
                         </div>
                     </div>
+                </div>
+                <div class="row">
                     <div class="col-md-4">
                         <label for="enterprise">Empresa</label>
                         <div class="inputbox">
@@ -366,6 +332,162 @@
                                 <option value="TIENDA PINTACUARIO S.A. DE C.V.">TIENDA PINTACUARIO S.A. DE C.V.</option>
                                 <option value="QTRANSPORTES MASTER S.A. DE C.V.">QTRANSPORTES MASTER S.A. DE C.V.</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="center">Centro</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                            <select class="form-control input-control" name="center" id="center">
+                                <option value="">Selecciona una opcion</option>
+                                <option value="BODEGA NEZA">BODEGA NEZA</option>
+                                <option value="BODEGA TAMPICO">BODEGA TAMPICO</option>
+                                <option value="CEDIS FABELA">CEDIS FABELA</option>
+                                <option value="CEDIS T- MASTER">CEDIS T- MASTER</option>
+                                <option value="PLANTA LER">PLANTA LER</option>
+                                <option value="PLANTA LERMA">PLANTA LERMA</option>
+                                <option value="SUCURSAL ACAPULCO">SUCURSAL ACAPULCO</option>
+                                <option value="TIENDA ERAZO">TIENDA ERAZO</option>
+                                <option value="TIENDA PUEBLA">TIENDA PUEBLA</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="department">Departamento</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-city"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="department" id="department">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label for="supervise">Responde a</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="supervise" id="supervise">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="nominating">Nomina</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <select class="form-control input-control" name="nominating" id="nominating">
+                                <option value="">Selecciona una opción</option>
+                                <option value="Semanal">Semanal</option>
+                                <option value="QS QUIMERA SOLUTIONS, S.A. DE C.V.">QS QUIMERA SOLUTIONS, S.A. DE C.V.</option>
+                                <option value="Quincenal">Quincenal</option>
+                                <option value="Quincenal_Admin">Quincenal Admin</option>
+                                <option value="QUINCENAL_QS_SOLUTIONS">QUINCENAL QS SOLUTIONS</option>
+                                <option value="Factura">Factura</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="n_position">N° Posición</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-hashtag"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="n_position" id="n_position">
+                        </div>
+                    </div>
+                    <div class="col-md-2 key">
+                        <label for="">Clave</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-key"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="key" id="key" placeholder="Clave*">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <label for="type_of_employee">Tipo de empleado</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-file-contract"></i>
+                            </div>
+                            <select class="form-control input-control" name="type_of_employee" id="type_of_employee">
+                                <option value="">Selecciona una opcion</option>
+                                <option value="Empleado">Empleado</option>
+                                <option value="Sindicalizado">Sindicalizado</option>
+                                <option value="No sindicalodado">No sindicalodado</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="has_a_credential">Cuenta con credencial</label>
+                        <div class="inputbox">
+                            <div>
+
+                            </div>
+                            <input class="form-control input-control" type="text" name="has_a_credential" id="has_a_credential">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <label for="payroll_area">Area nomina</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="payroll_area" id="payroll_area" disabled>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label>Estatus expediente</label>
+                        <div class="box-radio">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dossier" id="dossier1" value="existe">
+                                <label class="form-check-label" for="dossier1">
+                                    Existe
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="dossier" id="dossier2" value="falta">
+                                <label class="form-check-label" for="dossier2">
+                                    Falta
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <label>CI nuevo</label>
+                        <div class="box-radio">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="new_ci" id="new_ci1" value="si">
+                                <label class="form-check-label" for="new_ci1">
+                                    Si
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="new_ci" id="new_ci2" value="no">
+                                <label class="form-check-label" for="new_ci2">
+                                    No
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+  
+                </div>
+                <div class="row">
+                <div class="col-md-8">
+                        <label for="avc">AVC</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="avc" id="avc" disabled>
                         </div>
                     </div>
                 </div>
@@ -497,130 +619,15 @@
                             <input class="form-control input-control" type="text" name="antiquity" id="antiquity" disabled>
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <label for="n_position">N° Posición</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-hashtag"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="n_position" id="n_position">
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <label for="replaces">Sustituye a</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="replaces" id="replaces">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <label for="type_of_employee">Tipo de empleado</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-file-contract"></i>
-                            </div>
-                            <select class="form-control input-control" name="type_of_employee" id="type_of_employee">
-                                <option value="">Selecciona una opcion</option>
-                                <option value="Empleado">Empleado</option>
-                                <option value="Sindicalizado">Sindicalizado</option>
-                                <option value="No sindicalodado">No sindicalodado</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="has_a_credential">Cuenta con credencial</label>
-                        <div class="inputbox">
-                            <div>
 
-                            </div>
-                            <input class="form-control input-control" type="text" name="has_a_credential" id="has_a_credential">
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="center">Centro</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-building"></i>
-                            </div>
-                            <select class="form-control input-control" name="center" id="center">
-                                <option value="">Selecciona una opcion</option>
-                                <option value="BODEGA NEZA">BODEGA NEZA</option>
-                                <option value="BODEGA TAMPICO">BODEGA TAMPICO</option>
-                                <option value="CEDIS FABELA">CEDIS FABELA</option>
-                                <option value="CEDIS T- MASTER">CEDIS T- MASTER</option>
-                                <option value="PLANTA LER">PLANTA LER</option>
-                                <option value="PLANTA LERMA">PLANTA LERMA</option>
-                                <option value="SUCURSAL ACAPULCO">SUCURSAL ACAPULCO</option>
-                                <option value="TIENDA ERAZO">TIENDA ERAZO</option>
-                                <option value="TIENDA PUEBLA">TIENDA PUEBLA</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <label for="payroll_area">Area nomina</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-file-invoice-dollar"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="payroll_area" id="payroll_area">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <label>Estatus expediente</label>
-                        <div class="box-radio">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dossier" id="dossier1" value="existe">
-                                <label class="form-check-label" for="dossier1">
-                                    Existe
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="dossier" id="dossier2" value="falta">
-                                <label class="form-check-label" for="dossier2">
-                                    Falta
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <label>CI nuevo</label>
-                        <div class="box-radio">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="new_ci" id="new_ci1" value="si">
-                                <label class="form-check-label" for="new_ci1">
-                                    Si
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="new_ci" id="new_ci2" value="no">
-                                <label class="form-check-label" for="new_ci2">
-                                    No
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <label for="avc">AVC</label>
-                        <div class="inputbox">
-                            <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="avc" id="avc">
-                        </div>
-                    </div>
+
                 </div>
                 <div class="row">
                     <div class="col-md-3">
                         <label for="pantry_voucher_two">Vales de despensa</label>
                         <div class="inputbox">
                             <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
+                                <i class="fa-solid fa-dollar-sign"></i>
                             </div>
 
                             <input class="form-control input-control" type="text" name="pantry_voucher_two" id="pantry_voucher_two">
@@ -630,7 +637,7 @@
                         <label for="savings_fund_two">Fondo de ahorro</label>
                         <div class="inputbox">
                             <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
+                                <i class="fa-solid fa-dollar-sign"></i>
                             </div>
                             <input class="form-control input-control" type="text" name="savings_fund_two" id="savings_fund_two">
                         </div>
@@ -639,7 +646,7 @@
                         <label for="assimilated">Asimilados</label>
                         <div class="inputbox">
                             <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
+                                <i class="fa-solid fa-dollar-sign"></i>
                             </div>
                             <input class="form-control input-control" type="text" name="assimilated" id="assimilated">
                         </div>
@@ -648,7 +655,7 @@
                         <label for="daily_wage_imss_more_assimilated">Salario diario IMMS + asimilado </label>
                         <div class="inputbox">
                             <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
+                                <i class="fa-solid fa-dollar-sign"></i>
                             </div>
                             <input class="form-control input-control" type="text" name="daily_wage_imss_more_assimilated" id="daily_wage_imss_more_assimilated" disabled>
                         </div>
@@ -657,18 +664,36 @@
                         <label for="hc">HC</label>
                         <div class="inputbox">
                             <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
+                                <i class="fa-solid fa-dollar-sign"></i>
                             </div>
                             <input class="form-control input-control" type="text" name="hc" id="hc">
                         </div>
                     </div>
-                    <div class="col-md-2">
+                    <div class="col-md-3">
                         <label for="increase_90_days">Incremento 90 días</label>
                         <div class="inputbox">
                             <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
+                                <i class="fa-solid fa-dollar-sign"></i>
                             </div>
                             <input class="form-control input-control" type="text" name="increase_90_days" id="increase_90_days">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="vouchers_cct">Vales CCT</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-dollar-sign"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="vouchers_cct" id="vouchers_cct">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="emple_fapasa_number">N° emple fapasa</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-hashtag"></i>
+                            </div>
+                            <input class="form-control input-control" type="text" name="emple_fapasa_number" id="emple_fapasa_number">
                         </div>
                     </div>
                 </div>
@@ -677,29 +702,12 @@
                         <label for="address">Dirección</label>
                         <div class="inputbox">
                             <div>
-                            <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot"></i>
                             </div>
                             <input class="form-control input-control" type="text" name="address" id="address">
                         </div>
                     </div>
-                    <div class="col-md-2">
-                        <label for="vouchers_cct">Vales CCT</label>
-                        <div class="inputbox">
-                            <div>
-                            <i class="fa-solid fa-dollar-sign"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="vouchers_cct" id="vouchers_cct">
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <label for="emple_fapasa_number">N° emple fapasa</label>
-                        <div class="inputbox">
-                            <div>
-                            <i class="fa-solid fa-hashtag"></i>
-                            </div>
-                            <input class="form-control input-control" type="text" name="emple_fapasa_number" id="emple_fapasa_number">
-                        </div>
-                    </div>
+
 
                 </div>
             </div>
@@ -708,7 +716,7 @@
                     <label for="recruiter">Reclutador</label>
                     <div class="inputbox">
                         <div>
-                        <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-user"></i>
                         </div>
                         <input class="form-control input-control" type="text" name="recruiter" id="recruiter" disabled>
                     </div>

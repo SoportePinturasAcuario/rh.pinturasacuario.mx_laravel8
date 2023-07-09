@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    // Detecta el click en el boton "-" o "+"
     var option = document.getElementById('option');
     var box_one = document.getElementById('box-one');
     option.addEventListener("click", function () {
@@ -11,7 +12,7 @@ $(document).ready(function () {
             option.className = "fa-solid fa-plus";
         }
     });
-
+    // Detecta el click en el boton "-" o "+"
     var option_two = document.getElementById('option-two');
     var box_two = document.getElementById('box-two');
     option_two.addEventListener("click", function () {
@@ -23,12 +24,39 @@ $(document).ready(function () {
             option_two.className = "fa-solid fa-plus";
         }
     });
-
-
-
-
-
-
+    var ageCollaborator = document.getElementById('age');
+    var dateBirth = document.getElementById('date_of_birth');
+    // Calcula la edad del colaborador apartir de la fecha de nacimiento
+    dateBirth.onchange = function () {
+        ageCollaborator.value = calculateYears(dateBirth.value);
+    };
+    // Imprime el tipo de area nomina al que pertenece el colaborador
+    var  newPayrollArea = document.getElementById('payroll_area');
+    var stringDepartment = document.getElementById('department');
+    var stringTypeOfEmployee = document.getElementById('type_of_employee');
+    stringDepartment.oninput = function(){
+        newPayrollArea.value=payrollArea(stringDepartment.value,stringTypeOfEmployee.value);
+    };
+    stringTypeOfEmployee.oninput = function(){
+        newPayrollArea.value=payrollArea(stringDepartment.value,stringTypeOfEmployee.value);
+    };
+    function payrollArea(stringDepartment,stringTypeOfEmployee){
+        let PayrollArea=(stringDepartment + " " + stringTypeOfEmployee);
+        return PayrollArea;
+    }
+    // Imprime el AVC del colaborador
+    var  newAvc =document.getElementById('avc');
+    var selectCenter = document.getElementById('center');
+    stringTypeOfEmployee.onchange = function(){
+        newAvc.value = avc(selectCenter.value,stringTypeOfEmployee.value);
+    };
+    selectCenter.onchange=function(){
+        newAvc.value = avc(selectCenter.value,stringTypeOfEmployee.value);
+    };
+    function avc(stringSex,selectCenter,stringTypeOfEmployee){
+        let info = (stringSex + " " + selectCenter + " " + stringTypeOfEmployee);
+        return info;
+    }
 
     var currentSalary = document.getElementById('current_salary');
     var oldNominating = document.getElementById('nominating');
@@ -39,8 +67,6 @@ $(document).ready(function () {
     var oldtotal = document.getElementById('total');
     var dateEntry = document.getElementById('date_of_entry');
     var oldAntiquity = document.getElementById('antiquity');
-    var ageCollaborator = document.getElementById('age');
-    var dateBirth = document.getElementById('date_of_birth');
     var daily = document.getElementById('daily_wage_imss_more_assimilated');
     var oldAsimilated = document.getElementById('asimilated');
     //Calcula el SDI
@@ -70,7 +96,7 @@ $(document).ready(function () {
     }
     
     function total(weMoSalary, oldPantryVouchers,oldFund,oldAsimilated){
-        let all =  (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value)).toFixed(2);
+        let all =  (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value));
         oldtotal.value = all.toFixed(2);
         return oldtotal.value;
     }
@@ -125,9 +151,6 @@ $(document).ready(function () {
         }
     }
 
-    dateBirth.onchange = function () {
-        ageCollaborator.value = calculateYears(dateBirth.value);
-    };
 
     // Detecta los cambios dentro de Salarioactual
     currentSalary.oninput = function () {

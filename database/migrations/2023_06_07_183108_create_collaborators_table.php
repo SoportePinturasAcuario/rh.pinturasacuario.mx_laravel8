@@ -20,7 +20,7 @@ class CreateCollaboratorsTable extends Migration
             $table->string('key',5)->unique()->nullable();
             $table->string('name_collaborator',191)->nullable();
             $table->unsignedSmallInteger('age');
-            $table->string('sex',1);
+            $table->string('sex',10);
             $table->string('place_of_birth',191);
             $table->date('date_of_birth');
             $table->string('schooling',191);

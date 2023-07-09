@@ -69,7 +69,7 @@ class CollaboratorsController extends Controller
             'CURP' => 'required|regex:/^[A-Z]{4}[0-9]{6}[A-Z]{6}[0-9]{2}+$/',
             'Credito_infonavit' => 'numeric',
             'Monto' => 'numeric',
-            'Puesto' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
+            'Puesto' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú,", ,a-z,á,é,í,ó,ú,ñ]+$/',
             'Departamento' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
             'Responde_a' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
             'Actividad' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
@@ -89,24 +89,24 @@ class CollaboratorsController extends Controller
             'Días_contratado' => 'required|numeric',
             'Fin_de_contrato' => 'required|date',
             'Antiguedad' => 'required|numeric',
-            'N_Posición' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
+            'N_Posición' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ,0-9]+$/',
             'Sustituye_a' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
             'Tipo_de_empleado' => 'required',
             'Cuenta_con_credencial' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
             'Centro' => 'required',
             'Area_nomina' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
             'Estatus_del_expediente' => 'required',
-            'CI_nuevo' => 'required',
-            'avc' => 'required|regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
-            'Vales_de_despensa_two' => 'required',
-            'Fondo_de_ahorro_two' => 'required',
-            'Asimilados' => 'required',
-            'Salario_diario_IMMS_+_asimilado' => 'required|numeric',
-            'HC' => 'required',
-            'Incremento_90_días' => 'required',
-            'Direccion' => 'required',
-            'Vales_CCT' => 'required',
-            'N_emple_fapasa' => 'required|regex:/^[A-Z,0-9]+$/',
+            // 'CI_nuevo' => 'required',
+            'avc' => 'regex:/^[A-Z,Á,É,Í,Ó,Ú, ,a-z,á,é,í,ó,ú,ñ]+$/',
+            // 'Vales_de_despensa_two' => 'required',
+            // 'Fondo_de_ahorro_two' => 'required',
+            // 'Asimilados' => 'required',
+            'Salario_diario_IMMS_+_asimilado' => 'numeric',
+            // 'HC' => 'required',
+            // 'Incremento_90_días' => 'required',
+            // 'Direccion' => 'required',
+            // 'Vales_CCT' => 'required',
+            'N_emple_fapasa' => 'regex:/^[A-Z,0-9]+$/',
         ]);
         if($validator->fails()){
             return response()->json([
@@ -173,7 +173,7 @@ class CollaboratorsController extends Controller
             $collaboratorjobinfo->avc = $request->input('avc');
             $collaboratorjobinfo->pantry_voucher_two = $request->input('Vales_de_despensa_two');
             $collaboratorjobinfo->savings_fund_two = $request->input('Fondo_de_ahorro_two');
-            $collaboratorjobinfo->assimilated = $request->input('Asimilados');
+            $collaboratorjobinfo->assimilateds = $request->input('Asimilados');
             $collaboratorjobinfo->daily_wage_imss_more_assimilated = $request->input('Salario_diario_IMMS_+_asimilado');
             $collaboratorjobinfo->hc = $request->input('HC');
             $collaboratorjobinfo->increase_90_days = $request->input('Incremento_90_días');

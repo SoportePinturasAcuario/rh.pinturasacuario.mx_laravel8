@@ -36,13 +36,13 @@ class CreateCollaboratorJobInformationTable extends Migration
             $table->date('start_of_contract');
             $table->unsignedInteger('contracted_days');
             $table->date('day_evaluation');
-            $table->date('contracted_days_two');
+            $table->unsignedInteger('contracted_days_two');
             $table->date('end_of_contract');
             $table->integer('antiquity');
             $table->string('n_position',191);
             $table->string('replaces',191);
             $table->string('type_of_employee',191);
-            $table->double('has_a_credential',10,2);
+            $table->string('has_a_credential',10);
             $table->string('center',191);
             $table->string('payroll_area',191);
             $table->boolean('dossier');
