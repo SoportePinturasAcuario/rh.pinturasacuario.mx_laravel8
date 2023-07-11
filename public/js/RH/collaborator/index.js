@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $(document).on('click', '.add_colalborator', function (e) {
         e.preventDefault();
+        // Asignamos un nuevo nombre a los elementos
         var data = {
             'Clave': $("#key").val(),
             'Nombre_del_empleado': $("#name_collaborator").val(),
@@ -76,38 +77,55 @@ $(document).ready(function () {
             data: data,
             dataType: "json",
             success: function (response) {
+                // Alerta de error debuelto por el servidor
                 if (response.status == 400) {
                     var errores = Object.values(response.errors);
                     var t = 1000;
-                    for(var n = 0; n < errores.length;n++){
-                        toastr["error"](errores[n]);
-                        toastr.options = {
-                            "closeButton": false,
-                            "debug": false,
-                            "newestOnTop": false,
-                            "progressBar": true,
-                            "positionClass": "toast-bottom-right",
-                            "preventDuplicates": false,
-                            "onclick": null,
-                            "showDuration": "300",
-                            "hideDuration": "1000",
-                            "timeOut": t,
-                            "extendedTimeOut": "1000",
-                            "showEasing": "swing",
-                            "hideEasing": "linear",
-                            "showMethod": "fadeIn",
-                            "hideMethod": "fadeOut"
-                          }
-                          t=t+500;
+                    for (var n = 0; n < errores.length; n++) {
+                        if((n%3) == 0){
+                            toastr["error"](errores[n]);
+                            toastr.options = {
+                                "closeButton": false,
+                                "debug": false,
+                                "newestOnTop": false,
+                                "progressBar": true,
+                                "positionClass": "toast-bottom-right",
+                                "preventDuplicates": false,
+                                "onclick": null,
+                                "showDuration": "300",
+                                "hideDuration": "1000",
+                                "timeOut": t,
+                                "extendedTimeOut": "1000",
+                                "showEasing": "swing",
+                                "hideEasing": "linear",
+                                "showMethod": "fadeIn",
+                                "hideMethod": "fadeOut"
+                            }
+                            t = t + 500;
+                        }
                     }
-                } else {
+                }else {
+                    // alerta de satisfaccion por parte del servidor
                     Swal.fire({
                         position: "top-end",
                         icon: "success",
-                        title: "El colaborador " + data.name + " se registro exitosamente.",
+                        title: "El colaborador " + data.name_collaborator + " se registro exitosamente.",
                         showConfirmButton: false,
                         timer: 1500
                     });
+                    // Limpia las cajas 
+                    var arrayInputs = document.querySelectorAll("input");
+                    for (var n = 1; n < arrayInputs.length; n++) {
+                        switch (n) {
+                            case 4: case 5: case 46: case 48: case 31: case 32: case 33: case 34: case 35: case 60:
+                                arrayInputs[n].value = arrayInputs[n].value;
+                                break;
+                            default:
+                                arrayInputs[n].value = "";
+
+                        }
+                        // console.log(arrayInputs[n].name + " / " + arrayInputs[n].value + " / " + n);
+                    }
                 }
             }
         })

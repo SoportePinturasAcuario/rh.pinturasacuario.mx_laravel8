@@ -45,8 +45,8 @@ class CreateCollaboratorJobInformationTable extends Migration
             $table->string('has_a_credential',10);
             $table->string('center',191);
             $table->string('payroll_area',191);
-            $table->boolean('dossier');
-            $table->boolean('new_ci');
+            $table->string('dossier',10);
+            $table->string('new_ci',10);
             $table->string('avc',191);
             $table->string('pantry_voucher_two',191);
             $table->string('savings_fund_two',191);

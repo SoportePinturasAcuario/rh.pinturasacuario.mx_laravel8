@@ -24,7 +24,7 @@ class CreateCollaboratorsTable extends Migration
             $table->string('place_of_birth',191);
             $table->date('date_of_birth');
             $table->string('schooling',191);
-            $table->integer('phone');
+            $table->bigInteger('phone');
             $table->string('email',191);
             $table->string('street_number',191);
             $table->string('colony',191);

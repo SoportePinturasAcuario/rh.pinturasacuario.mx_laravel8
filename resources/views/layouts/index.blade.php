@@ -32,7 +32,7 @@
                 <div class="row">
                     <nav>
                         <ul>
-                            <!-- <li>
+                             <li>
                                 <a href="">
                                     <div class="option-nav">
                                         <div class="icon">
@@ -68,7 +68,7 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li> -->
+                            </li>
                         </ul>
                     </nav>
                 </div>

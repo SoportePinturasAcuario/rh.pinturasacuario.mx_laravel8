@@ -14,7 +14,7 @@
         <div class="container">
             <div class="row nav-title">
                 <div class="item-title">
-                    <h4>Datos del colaborador</h4>
+                    <h5>Datos del colaborador</h5>
                 </div>
                 <div class="options item-title">
                     <i class="fa-solid fa-plus" id="option"></i>
@@ -48,7 +48,7 @@
                         <label>Sexo</label>
                         <div class="box-radio">
                             <div class="form-check">
-                                <input class="form-check-input" type="radio" name="sex" id="sex1" value="Masculino" >
+                                <input class="form-check-input" type="radio" name="sex" id="sex1" value="Masculino">
                                 <label class="form-check-label" for="sex1">
                                     M
                                 </label>
@@ -273,7 +273,7 @@
             <!-- Información de su trabajo -->
             <div class="row nav-title">
                 <div class="item-title">
-                    <h4>Información de su trabajo</h4>
+                    <h5>Información de su trabajo</h5>
                 </div>
                 <div class="options item-title">
                     <i class="fa-solid fa-plus" id="option-two"></i>
@@ -434,7 +434,7 @@
                             <input class="form-control input-control" type="text" name="has_a_credential" id="has_a_credential">
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4">
                         <label for="payroll_area">Area nomina</label>
                         <div class="inputbox">
@@ -478,10 +478,10 @@
                             </div>
                         </div>
                     </div>
-  
+
                 </div>
                 <div class="row">
-                <div class="col-md-8">
+                    <div class="col-md-8">
                         <label for="avc">AVC</label>
                         <div class="inputbox">
                             <div>
@@ -507,7 +507,7 @@
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="sdi" id="sdi" value="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="sdi" id="sdi" placeholder="0.00" disabled>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -516,7 +516,7 @@
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="weekly_or_monthly_salary" id="weekly_or_monthly_salary" value="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="weekly_or_monthly_salary" id="weekly_or_monthly_salary" placeholder="0.00" disabled>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -525,7 +525,7 @@
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="pantry_vouchers" id="pantry_vouchers" value="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="pantry_vouchers" id="pantry_vouchers" placeholder="0.00" disabled>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -534,7 +534,7 @@
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="savings_fund" id="savings_fund" value="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="savings_fund" id="savings_fund" placeholder="0.00" disabled>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -543,7 +543,7 @@
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="assimilated" id="assimilated" value="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="assimilated" id="assimilated" placeholder="0.00" disabled>
                         </div>
                     </div>
                     <div class="col-md-2">
@@ -552,7 +552,7 @@
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="total" id="total" value="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="total" id="total" placeholder="0.00" disabled>
                         </div>
                     </div>
                 </div>
@@ -724,7 +724,6 @@
 
                 <div class="col-md-3">
                     <div class="inputbox">
-
                         <button type="button" class="form-control add_colalborator">Registrar</button>
                     </div>
                 </div>

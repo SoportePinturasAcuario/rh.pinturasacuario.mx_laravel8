@@ -25,8 +25,8 @@ form .container .row .inputbox .dis-input-control{
     padding: 0px 5px;
 }
 form .container .row .inputbox .input-control:focus, .dis-input-control:focus{
-    border: 1px solid rgb(0, 147, 0);
-    box-shadow: 1px 0px 1px 1px green;
+    border: 1px solid #6397BB;
+    box-shadow: 3px 0px 1px 2px #6397BB;
 }
 form .container .nav-title{
     background-color: cadetblue;
