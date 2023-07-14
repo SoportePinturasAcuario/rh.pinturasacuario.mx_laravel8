@@ -9,6 +9,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class enterprises extends Model
 {
     use HasFactory,SoftDeletes;
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_enterprise';
     protected $fillable = ['name_enterprise'];
 }

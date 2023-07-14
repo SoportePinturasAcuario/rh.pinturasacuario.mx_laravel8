@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="css/table.css">
 @endsection
 @section('contend')
-<!-- Contenido de centros -->
+<!-- Contenido de los centros de trabajo -->
 <!-- Modal Agregar-->
 <div class="modal fade" id="AddcentersModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
@@ -72,56 +72,138 @@
     </div>
 </div>
 
+<!-- Contenido de empresas -->
+<!-- Modal Agregar-->
+<div class="modal fade" id="AddEnterpriseModel" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nueva Empresa</h5>
+                <button type="button" class="btn-close cancel" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul id="saveform_errList"></ul>
+                <div class="form-group mb-3">
+
+                    <label for="name_enterprise">Nombre</label>
+                    <input type="text" name="" id="name_enterprise" class="name_enterprise form-control" placeholder="(Planta Lerma)">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary cancel" data-bs-dismiss="modal">Cancelar</button>
+                <button type="button" class="btn btn-success addenterprice">Agregar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Tabla de reportes -->
 <div class="box-body">
-    <div class="box-table-reports ">
-        <div class="" id="success_message"></div>
-        {{-- Notificacion de registro correcto --}}
-        <div class="card-header">
-            <h4>Reporte de Sucursales
-                
-                </h4>
-                {{-- Boton modal --}}
-                <a href="#" data-bs-toggle="modal" data-bs-target="#AddcentersModel" class="btn btn-primary float-end btn-sm">
-                    Nuevo
-                </a>
-                {{-- ----------- --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box-table-reports ">
+                    <div class="" id="success_message"></div>
+                    {{-- Notificacion de registro correcto --}}
+                    <div class="card-header">
+                        <h4>Reporte de Sucursales
+
+                        </h4>
+                        {{-- Boton modal --}}
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#AddcentersModel" class="btn btn-primary float-end btn-sm">
+                            Nuevo
+                        </a>
+                        {{-- ----------- --}}
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr class="table-primary">
+                                <td class="col-1">#</td>
+                                <td class="col-4">Nombre</td>
+                                <td class="col-3">Acciones</td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+
+            </div>
+            <div class="col-md-6">
+                <div class="box-table-reports ">
+                    <div class="" id="success_message"></div>
+                    {{-- Notificacion de registro correcto --}}
+                    <div class="card-header">
+                        <h4>Reporte de Sucursales
+
+                        </h4>
+                        {{-- Boton modal --}}
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#AddEnterpriseModel" class="btn btn-primary float-end btn-sm">
+                            Nuevo
+                        </a>
+                        {{-- ----------- --}}
+                    </div>
+                    <table class="table">
+                        <thead>
+                            <tr class="table-primary">
+                                <td class="col-1">#</td>
+                                <td class="col-4">Nombre</td>
+                                <td class="col-3">Acciones</td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <nav aria-label="Page navigation example">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
-        <table class="table">
-            <thead>
-                <tr class="table-primary">
-                    <td class="col-1">#</td>
-                    <td class="col-4">Nombre</td>
-                    <td class="col-3">Acciones</td>
-                </tr>
-            </thead>
-        </table>
-        <div class="table-responsive">
-            <table class="table table-hover">
-                <tbody>
-                </tbody>
-            </table>
-        </div>
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
     </div>
+
 </div>
 @endsection
 @section('scripts')
-<script src="js/RH/centers/index.js"></script>
+<script src="js/RH/enterprises_and_centers/index.js"></script>
 @endsection

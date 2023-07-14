@@ -14,7 +14,7 @@ class CreateEnterprisesTable extends Migration
     public function up()
     {
         Schema::create('enterprises', function (Blueprint $table) {
-            $table->increments('id',11)->unique()->nullable();
+            $table->increments('id_enterprise',11)->unique()->nullable();
             $table->string('name_enterprise',250)->nullable();
             $table->timestamps();
             $table->softDeletes();

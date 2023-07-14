@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\RH;
 
 use App\Http\Controllers\Controller;
+use App\Models\RH\enterprises;
 use Illuminate\Http\Request;
 
 class EnterprisesController extends Controller
@@ -15,6 +16,13 @@ class EnterprisesController extends Controller
     public function index()
     {
         return view('RH/enterprise_and_center/index');
+    }
+    public function fechEnterprises(){
+        $enterprise = enterprises::orderBy('id_enterprise','DESC')
+        ->get();
+        return response()->json([
+            'enterprise' => $enterprise,
+        ]);
     }
     /**
      * Show the form for creating a new resource.
@@ -34,7 +42,7 @@ class EnterprisesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**

@@ -59,14 +59,24 @@ $(document).ready(function () {
                     $('#saveform_errList').html("");
                     $('#saveform_errList').removeClass("alert alert-danger");
                     $('#AddcentersModel').find('input').val("");
-                    Swal.fire({
-                        position: "top-end",
-                        icon: "success",
-                        title: "La sucursal " + data.name + " se registro exitosamente.",
-                        showConfirmButton: false,
-                        timer: 1500
-                    });
-
+                    toastr["success"]("Have fun storming the castle!");
+                    toastr.options = {
+                        "closeButton": false,
+                        "debug": false,
+                        "newestOnTop": false,
+                        "progressBar": true,
+                        "positionClass": "toast-top-right",
+                        "preventDuplicates": false,
+                        "onclick": null,
+                        "showDuration": "300",
+                        "hideDuration": "1000",
+                        "timeOut": "5000",
+                        "extendedTimeOut": "1000",
+                        "showEasing": "swing",
+                        "hideEasing": "linear",
+                        "showMethod": "fadeIn",
+                        "hideMethod": "fadeOut"
+                      };
                     fetchcenter();
                 }
             }
@@ -144,13 +154,13 @@ $(document).ready(function () {
         });
         fetchcenter();
     });
-    $(document).on('click', '.delete_centers', function (e){
-    e.preventDefault();
-    var center_id = $(this).val();
-    $('#delete_center_id').val(center_id);
-    $('#DeletecentersModel').modal('show');
+    $(document).on('click', '.delete_centers', function (e) {
+        e.preventDefault();
+        var center_id = $(this).val();
+        $('#delete_center_id').val(center_id);
+        $('#DeletecentersModel').modal('show');
     });
-    $(document).on('click', '.delete_centers_btn',function(e){
+    $(document).on('click', '.delete_centers_btn', function (e) {
         e.preventDefault();
         var center_id = $('#delete_center_id').val();
         $.ajaxSetup({
@@ -160,8 +170,8 @@ $(document).ready(function () {
         });
         $.ajax({
             type: "DELETE",
-            url: '/delete-center/'+ center_id,
-            success: function(response){
+            url: '/delete-center/' + center_id,
+            success: function (response) {
                 Swal.fire({
                     position: "top-end",
                     icon: "success",
@@ -169,7 +179,7 @@ $(document).ready(function () {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                $('#DeletecentersModel').modal('hide');  
+                $('#DeletecentersModel').modal('hide');
                 fetchcenter();
             }
         })
