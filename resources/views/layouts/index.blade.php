@@ -32,7 +32,7 @@
                     <nav>
                         <ul>
                             <li>
-                                <a href="">
+                                <a href="/">
                                     <div class="option-nav">
                                         <div class="icon">
                                             <i class="fa-regular fa-user"></i>
@@ -57,13 +57,13 @@
                             </li>
                             <hr>
                             <li>
-                                <a href="">
+                                <a href="/enterprise_and_centers" title="Empresas y Centros">
                                     <div class="option-nav">
                                         <div class="icon">
-                                            <i class="fa-regular fa-user"></i>
+                                            <i class="fa-solid fa-city"></i>
                                         </div>
                                         <div class="section">
-                                            <p>Reporte</p>
+                                            <p>Empresas y Centros</p>
                                         </div>
                                     </div>
                                 </a>
