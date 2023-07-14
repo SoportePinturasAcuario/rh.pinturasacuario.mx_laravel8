@@ -25,7 +25,6 @@ class collaboratorJobInformation extends Model
         'savings_fund',
         'assimilated',
         'total',
-        
         'date_of_entry',
         'start_of_contract',
         'contracted_days',
@@ -49,8 +48,8 @@ class collaboratorJobInformation extends Model
         'hc',
         'increase_90_days',
         'Address',
-        'vouchers_cct',
-        'emple_fapasa_number',
+        // 'vouchers_cct',
+        // 'emple_fapasa_number',
         'recruiter',
     ];
 }

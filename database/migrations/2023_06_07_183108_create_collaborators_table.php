@@ -34,8 +34,9 @@ class CreateCollaboratorsTable extends Migration
             $table->string('mother_name',191);
             $table->string('marital_status',191);
             $table->string('spouse',191);
-            $table->unsignedSmallInteger('children');
-
+            $table->unsignedSmallInteger('children_one');
+            $table->unsignedSmallInteger('children_two');
+            $table->unsignedSmallInteger('children_three');
             $table->unsignedBigInteger('no_imss');
             $table->string('rfc',13);
             $table->string('curp',18);

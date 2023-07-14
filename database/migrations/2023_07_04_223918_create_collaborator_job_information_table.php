@@ -55,8 +55,8 @@ class CreateCollaboratorJobInformationTable extends Migration
             $table->boolean('hc');
             $table->double('increase_90_days');
             $table->string('Address',191);
-            $table->string('vouchers_cct',191);
-            $table->string('emple_fapasa_number',191);
+            // $table->string('vouchers_cct',191);
+            // $table->string('emple_fapasa_number',191);
             // $table->string('recruiter',191);
 
             $table->timestamps();

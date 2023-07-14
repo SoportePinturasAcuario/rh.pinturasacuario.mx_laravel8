@@ -1,5 +1,6 @@
 input{
     text-align: center;
+    text-transform: uppercase;
 }
 form .container .row .inputbox, .box-radio{
     display: flex;

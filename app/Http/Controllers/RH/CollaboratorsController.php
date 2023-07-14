@@ -44,7 +44,6 @@ class CollaboratorsController extends Controller
      */
     public function store(Request $request)
     {
-     
         $validator = Validator::make($request->all(),[
             // Correcto
             'Clave'=>'required|unique:collaborators,key|regex:/^[A-Z,0-9]+$/',
@@ -63,8 +62,10 @@ class CollaboratorsController extends Controller
             'Nombre_del_padre' => 'required|regex:/^[A-ZÁÉÍÓÚÑÜ ,]+$/',
             'Nombre_de_la_madre' => 'required|regex:/^[A-ZÁÉÍÓÚÑÜ ,]+$/',
             'Estado_civil' => 'required',
-            'Conyuge' => 'required|regex:/^[A-ZÁÉÍÓÚÑÜ ,]+$/',
-            'Hijos' => 'required|regex:/^[0-9]+$/',
+            'Conyuge' => 'nullable|regex:/^[A-ZÁÉÍÓÚÑÜ ,]+$/',
+            'Hijo_1' => 'nullable|numeric|min:0|max:24',
+            'Hijo_2' => 'nullable|numeric|min:0|max:24',
+            'Hijo_3' => 'nullable|numeric|min:0|max:24',
             'IMSS' => 'required|digits:11',
             'RFC' => 'required|regex:/^[A-Z]{4}[0-9]{6}[A-Z]{2}[0-9]{1}+$/',
             'CURP' => 'required|regex:/^[A-Z]{4}[0-9]{6}[A-Z]{6}[0-9]{2}+$/',
@@ -92,7 +93,7 @@ class CollaboratorsController extends Controller
             'Fin_de_contrato' => 'required|date',
             'Antiguedad' => 'required|numeric',
             'N_Posición' => 'required|regex:/^[A-ZÁÉÍÓÚÑÜ ,."0-9]+$/',
-            'Sustituye_a' => 'required|regex:/^[A-ZÁÉÍÓÚÑÜa-z ,."]+$/',
+            'Sustituye_a' => 'nullable|regex:/^[A-ZÁÉÍÓÚÑÜa-z ,."]+$/',
             'Tipo_de_empleado' => 'required',
             'Cuenta_con_credencial' => 'required|regex:/^[A-ZÁÉÍÓÚÑÜ ,."]+$/',
             'Centro' => 'required',
@@ -107,8 +108,8 @@ class CollaboratorsController extends Controller
             'HC' => 'required',
             'Incremento_90_días' => 'required',
             'Direccion' => 'required',
-            'Vales_CCT' => 'required',
-            'N_emple_fapasa' => 'regex:/^[A-Z,0-9]+$/',
+            // -> Eliminar 'Vales_CCT' => 'required',
+            // -> Eliminar 'N_emple_fapasa' => 'regex:/^[A-Z,0-9]+$/',
         ]);
         if($validator->fails()){
             return response()->json([
@@ -180,8 +181,8 @@ class CollaboratorsController extends Controller
             $collaboratorjobinfo->hc = $request->input('HC');
             $collaboratorjobinfo->increase_90_days = $request->input('Incremento_90_días');
             $collaboratorjobinfo->address = $request->input('Direccion');
-            $collaboratorjobinfo->vouchers_cct = $request->input('Vales_CCT');
-            $collaboratorjobinfo->emple_fapasa_number = $request->input('N_emple_fapasa');
+            // $collaboratorjobinfo->vouchers_cct = $request->input('Vales_CCT');
+            // $collaboratorjobinfo->emple_fapasa_number = $request->input('N_emple_fapasa');
             $collaboratorjobinfo->save();
 
             return response()->json([

@@ -24,6 +24,12 @@ $(document).ready(function () {
             option_two.className = "fa-solid fa-plus";
         }
     });
+    var arrayInputsForm = document.querySelectorAll("input");
+    for(var n = 1; n < arrayInputsForm.length; n++){
+        console.log(arrayInputsForm[n].name + " / " + arrayInputsForm[n].value + " / " + n);
+    };
+
+
     var ageCollaborator = document.getElementById('age');
     var dateBirth = document.getElementById('date_of_birth');
     // Calcula la edad del colaborador apartir de la fecha de nacimiento
@@ -31,29 +37,29 @@ $(document).ready(function () {
         ageCollaborator.value = calculateYears(dateBirth.value);
     };
     // Imprime el tipo de area nomina al que pertenece el colaborador
-    var  newPayrollArea = document.getElementById('payroll_area');
+    var newPayrollArea = document.getElementById('payroll_area');
     var stringDepartment = document.getElementById('department');
     var stringTypeOfEmployee = document.getElementById('type_of_employee');
-    stringDepartment.oninput = function(){
-        newPayrollArea.value=payrollArea(stringDepartment.value,stringTypeOfEmployee.value);
+    stringDepartment.oninput = function () {
+        newPayrollArea.value = payrollArea(stringDepartment.value, stringTypeOfEmployee.value);
     };
-    stringTypeOfEmployee.oninput = function(){
-        newPayrollArea.value=payrollArea(stringDepartment.value,stringTypeOfEmployee.value);
+    stringTypeOfEmployee.oninput = function () {
+        newPayrollArea.value = payrollArea(stringDepartment.value, stringTypeOfEmployee.value);
     };
-    function payrollArea(stringDepartment,stringTypeOfEmployee){
-        let PayrollArea=(stringDepartment + " " + stringTypeOfEmployee);
+    function payrollArea(stringDepartment, stringTypeOfEmployee) {
+        let PayrollArea = (stringDepartment + " " + stringTypeOfEmployee);
         return PayrollArea;
     }
     // Imprime el AVC del colaborador
-    var  newAvc =document.getElementById('avc');
+    var newAvc = document.getElementById('avc');
     var selectCenter = document.getElementById('center');
-    stringTypeOfEmployee.onchange = function(){
-        newAvc.value = avc(selectCenter.value,stringTypeOfEmployee.value);
+    stringTypeOfEmployee.onchange = function () {
+        newAvc.value = avc(selectCenter.value, stringTypeOfEmployee.value);
     };
-    selectCenter.onchange=function(){
-        newAvc.value = avc(selectCenter.value,stringTypeOfEmployee.value);
+    selectCenter.onchange = function () {
+        newAvc.value = avc(selectCenter.value, stringTypeOfEmployee.value);
     };
-    function avc(stringSex,selectCenter,stringTypeOfEmployee){
+    function avc(stringSex, selectCenter, stringTypeOfEmployee) {
         let info = (stringSex + " " + selectCenter + " " + stringTypeOfEmployee);
         return info;
     }
@@ -77,7 +83,7 @@ $(document).ready(function () {
         return newSdi.value;
     }
     //Calcula el sueldo mensual
-    function current(currentSalary){
+    function current(currentSalary) {
         let new_weMoSalary = (currentSalary.value * 30);
         weMoSalary.value = new_weMoSalary.toFixed(2);
         return weMoSalary.value;
@@ -94,9 +100,9 @@ $(document).ready(function () {
         oldFund.value = fund.toFixed(2);
         return oldFund.value;
     }
-    
-    function total(weMoSalary, oldPantryVouchers,oldFund,oldAsimilated){
-        let all =  (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value));
+
+    function total(weMoSalary, oldPantryVouchers, oldFund, oldAsimilated) {
+        let all = (Number(weMoSalary.value) + Number(oldPantryVouchers.value) + Number(oldFund.value));
         oldtotal.value = all.toFixed(2);
         return oldtotal.value;
     }
@@ -106,7 +112,7 @@ $(document).ready(function () {
     //     let valor = oldNominating.value;
     //     return valor;
     // }
-    
+
 
     // Calcula los años
     function calculateYears(fecha) {
@@ -139,7 +145,7 @@ $(document).ready(function () {
             current(currentSalary);
             pantryVouchers(weMoSalary);
             savingsFund(weMoSalary);
-            total(weMoSalary, oldPantryVouchers,oldFund,oldAsimilated);
+            total(weMoSalary, oldPantryVouchers, oldFund, oldAsimilated);
             daily.value = (weMoSalary.value / 30).toFixed(2);
         } else {
             weMoSalary.value = '0.00';

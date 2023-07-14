@@ -20,7 +20,9 @@ $(document).ready(function () {
             'Nombre_de_la_madre': $("#mother_name").val(),
             'Estado_civil': $("#marital_status").val(),
             'Conyuge': $("#spouse").val(),
-            'Hijos': $("#children").val(),
+            'Hijo_1': $("#children_one").val(),
+            'Hijo_2': $("#children_two").val(),
+            'Hijo_3': $("#children_three").val(),
             'IMSS': $("#no_imss").val(),
             'RFC': $("#rfc").val(),
             'CURP': $("#curp").val(),
@@ -63,8 +65,8 @@ $(document).ready(function () {
             'HC': $('#hc').val(),
             'Incremento_90_días': $('#increase_90_days').val(),
             'Direccion': $('#address').val(),
-            'Vales_CCT': $('#vouchers_cct').val(),
-            'N_emple_fapasa': $('#emple_fapasa_number').val(),
+            // 'Vales_CCT': $('#vouchers_cct').val(),
+            // 'N_emple_fapasa': $('#emple_fapasa_number').val(),
         }
         $.ajaxSetup({
             headers: {
@@ -82,29 +84,28 @@ $(document).ready(function () {
                     var errores = Object.values(response.errors);
                     var t = 1000;
                     for (var n = 0; n < errores.length; n++) {
-                        if((n%3) == 0){
-                            toastr["error"](errores[n]);
-                            toastr.options = {
-                                "closeButton": false,
-                                "debug": false,
-                                "newestOnTop": false,
-                                "progressBar": true,
-                                "positionClass": "toast-bottom-right",
-                                "preventDuplicates": false,
-                                "onclick": null,
-                                "showDuration": "300",
-                                "hideDuration": "1000",
-                                "timeOut": t,
-                                "extendedTimeOut": "1000",
-                                "showEasing": "swing",
-                                "hideEasing": "linear",
-                                "showMethod": "fadeIn",
-                                "hideMethod": "fadeOut"
-                            }
-                            t = t + 500;
+                        toastr["error"](errores[n]);
+                        toastr.options = {
+                            "closeButton": false,
+                            "debug": false,
+                            "newestOnTop": false,
+                            "progressBar": true,
+                            "positionClass": "toast-bottom-right",
+                            "preventDuplicates": false,
+                            "onclick": null,
+                            "showDuration": "300",
+                            "hideDuration": "1000",
+                            "timeOut": t,
+                            "extendedTimeOut": "1000",
+                            "showEasing": "swing",
+                            "hideEasing": "linear",
+                            "showMethod": "fadeIn",
+                            "hideMethod": "fadeOut"
                         }
+                        t = t + 500;
                     }
-                }else {
+
+                } else {
                     // alerta de satisfaccion por parte del servidor
                     Swal.fire({
                         position: "top-end",
@@ -117,15 +118,16 @@ $(document).ready(function () {
                     var arrayInputs = document.querySelectorAll("input");
                     for (var n = 1; n < arrayInputs.length; n++) {
                         switch (n) {
-                            case 4: case 5: case 46: case 48: case 31: case 32: case 33: case 34: case 35: case 60:
+                            case 4: case 5: case 34: case 35: case 36: case 37: case 48: case 50:
                                 arrayInputs[n].value = arrayInputs[n].value;
                                 break;
                             default:
                                 arrayInputs[n].value = "";
 
                         }
-                        // console.log(arrayInputs[n].name + " / " + arrayInputs[n].value + " / " + n);
+                        console.log(arrayInputs[n].name + " / " + arrayInputs[n].value + " / " + n);
                     }
+                    console.log(arrayInputs.length);
                 }
             }
         })

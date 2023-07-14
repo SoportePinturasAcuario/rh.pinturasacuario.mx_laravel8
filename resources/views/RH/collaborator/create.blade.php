@@ -23,7 +23,7 @@
             <div class="box-inputs" id="box-one">
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="name_collaborator">Nombre del empleado</label>
+                        <label for="name_collaborator">Nombre del empleado *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -32,30 +32,30 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="date_of_birth">Fecha de nacimiento</label>
+                        <label for="date_of_birth">Fecha de nacimiento *</label>
                         <div class="inputbox">
                             <input class="form-control dis-input-control" type="date" name="date_of_birth" id="date_of_birth">
                         </div>
                     </div>
 
                     <div class="col-md-1">
-                        <label for="age">Edad</label>
+                        <label for="age">Edad *</label>
                         <div class="inputbox">
                             <input class="form-control dis-input-control" type="text" name="age" id="age" disabled>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label>Sexo</label>
+                        <label>Sexo *</label>
                         <div class="box-radio">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="sex" id="sex1" value="Masculino">
-                                <label class="form-check-label" for="sex1">
+                                <label class="form-check-label" for=" *sex1">
                                     M
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="sex" id="sex2" value="Femenino">
-                                <label class="form-check-label" for="sex2">
+                                <label class="form-check-label" for=" *sex2">
                                     F
                                 </label>
                             </div>
@@ -64,7 +64,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="place_of_birth">Lugar de nacimiento</label>
+                        <label for="place_of_birth">Lugar de nacimiento *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="schooling">Escolaridad</label>
+                        <label for="schooling">Escolaridad *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-school-flag"></i>
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="phone">Telefono</label>
+                        <label for="phone">Telefono *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-phone"></i>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="email">Correo electronico</label>
+                        <label for="email">Correo electronico *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-envelope"></i>
@@ -102,7 +102,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="street_number">Calle y Numero</label>
+                        <label for="street_number">Calle y Numero *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -111,7 +111,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="colony">Colonia</label>
+                        <label for="colony">Colonia *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -122,7 +122,7 @@
 
 
                     <div class="col-md-2">
-                        <label for="cp">CP</label>
+                        <label for="cp">CP *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -131,7 +131,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="municipality">Municipio</label>
+                        <label for="municipality">Municipio *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -144,7 +144,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="fathers_name">Nombre del padre</label>
+                        <label for="fathers_name">Nombre del padre *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -153,7 +153,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="mother_name">Nombre de la madre</label>
+                        <label for="mother_name">Nombre de la madre *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -162,7 +162,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="marital_status">Estado civil</label>
+                        <label for="marital_status">Estado civil *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -179,7 +179,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="spouse">Conyuge</label>
+                        <label for="spouse">Conyuge *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -190,40 +190,40 @@
                     </div>
 
                     <div class="col-md-1">
-                        <label for="children">Hijos 1</label>
+                        <label for="children_one">Hijos 1 *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
 
                             </div>
-                            <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad">
-                        </div>
-                    </div>
-                    <!-- <div class="col-md-1">
-                        <label for="children">Hijos 2</label>
-                        <div class="inputbox">
-                            <div>
-                                <i class="fa-solid fa-user"></i>
-
-                            </div>
-                            <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad2">
+                            <input class="form-control input-control" type="text" name="children_one" id="children_one" placeholder="Edad">
                         </div>
                     </div>
                     <div class="col-md-1">
-                        <label for="children">Hijos 3</label>
+                        <label for="children_two">Hijos 2 *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
 
                             </div>
-                            <input class="form-control input-control" type="text" name="children" id="children" placeholder="Edad3">
+                            <input class="form-control input-control" type="text" name="children_two" id="children_two" placeholder="Edad2">
                         </div>
-                    </div> -->
+                    </div>
+                    <div class="col-md-1">
+                        <label for="children_three">Hijos 3 *</label>
+                        <div class="inputbox">
+                            <div>
+                                <i class="fa-solid fa-user"></i>
+
+                            </div>
+                            <input class="form-control input-control" type="text" name="children_three" id="children_three" placeholder="Edad3">
+                        </div>
+                    </div>
 
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <label for="no_imss">No IMSS</label>
+                        <label for="no_imss">No IMSS *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-hashtag"></i>
@@ -233,7 +233,7 @@
                     </div>
 
                     <div class="col-md-2">
-                        <label for="rfc">RFC</label>
+                        <label for="rfc">RFC *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-key"></i>
@@ -242,7 +242,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="curp">CURP</label>
+                        <label for="curp">CURP *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-key"></i>
@@ -251,7 +251,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="credit_infonavit">Credito infonavit</label>
+                        <label for="credit_infonavit">Credito infonavit *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-hashtag"></i>
@@ -260,7 +260,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="amount">Monto</label>
+                        <label for="amount">Monto *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -283,7 +283,7 @@
 
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="stand">Puesto</label>
+                        <label for="stand">Puesto *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-regular fa-id-card"></i>
@@ -292,7 +292,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="activity">Actividad</label>
+                        <label for="activity">Actividad *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-screwdriver-wrench"></i>
@@ -302,7 +302,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <label for="replaces">Sustituye a</label>
+                        <label for="replaces">Sustituye a *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -313,7 +313,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="enterprise">Empresa</label>
+                        <label for="enterprise">Empresa *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-building"></i>
@@ -335,7 +335,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="center">Centro</label>
+                        <label for="center">Centro *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-building"></i>
@@ -355,7 +355,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="department">Departamento</label>
+                        <label for="department">Departamento *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-city"></i>
@@ -366,7 +366,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <label for="supervise">Responde a</label>
+                        <label for="supervise">Responde a *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-user"></i>
@@ -375,7 +375,7 @@
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <label for="nominating">Nomina</label>
+                        <label for="nominating">Nomina *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-file-invoice-dollar"></i>
@@ -392,7 +392,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="n_position">N° Posición</label>
+                        <label for="n_position">N° Posición *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-hashtag"></i>
@@ -401,7 +401,7 @@
                         </div>
                     </div>
                     <div class="col-md-2 key">
-                        <label for="">Clave</label>
+                        <label for="">Clave *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-key"></i>
@@ -412,7 +412,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <label for="type_of_employee">Tipo de empleado</label>
+                        <label for="type_of_employee">Tipo de empleado *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-file-contract"></i>
@@ -426,7 +426,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="has_a_credential">Cuenta con credencial</label>
+                        <label for="has_a_credential">Cuenta con credencial *</label>
                         <div class="inputbox">
                             <div>
 
@@ -436,7 +436,7 @@
                     </div>
 
                     <div class="col-md-4">
-                        <label for="payroll_area">Area nomina</label>
+                        <label for="payroll_area">Area nomina *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-file-invoice-dollar"></i>
@@ -445,34 +445,34 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label>Estatus expediente</label>
+                        <label>Estatus expediente *</label>
                         <div class="box-radio">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="dossier" id="dossier1" value="existe">
-                                <label class="form-check-label" for="dossier1">
+                                <label class="form-check-label" for=" *dossier1">
                                     Existe
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="dossier" id="dossier2" value="falta">
-                                <label class="form-check-label" for="dossier2">
+                                <label class="form-check-label" for=" *dossier2">
                                     Falta
                                 </label>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label>CI nuevo</label>
+                        <label>CI nuevo *</label>
                         <div class="box-radio">
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="new_ci" id="new_ci1" value="si">
-                                <label class="form-check-label" for="new_ci1">
+                                <label class="form-check-label" for=" *new_ci1">
                                     Si
                                 </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="new_ci" id="new_ci2" value="no">
-                                <label class="form-check-label" for="new_ci2">
+                                <label class="form-check-label" for=" *new_ci2">
                                     No
                                 </label>
                             </div>
@@ -482,7 +482,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-8">
-                        <label for="avc">AVC</label>
+                        <label for="avc">AVC *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -493,7 +493,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <label for="current_salary">Salario actual</label>
+                        <label for="current_salary">Salario actual *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -502,7 +502,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="sdi">SDI</label>
+                        <label for="sdi">SDI *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -511,7 +511,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="weekly_or_monthly_salary">Sueldo sem/men</label>
+                        <label for="weekly_or_monthly_salary">Sueldo sem/men *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -520,34 +520,34 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="pantry_vouchers">Vales de despensa</label>
+                        <label for="pantry_vouchers">Vales de despensa *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="pantry_vouchers" id="pantry_vouchers" placeholder="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="pantry_vouchers" id="pantry_vouchers" placeholder="0.00" >
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="savings_fund">Fondo de ahorro</label>
+                        <label for="savings_fund">Fondo de ahorro *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="savings_fund" id="savings_fund" placeholder="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="savings_fund" id="savings_fund" placeholder="0.00" >
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="assimilated">Asimilado</label>
+                        <label for="assimilated">Asimilado *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
                             </div>
-                            <input class="form-control input-control" type="text" name="assimilated" id="assimilated" placeholder="0.00" disabled>
+                            <input class="form-control input-control" type="text" name="assimilated" id="assimilated" placeholder="0.00" >
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="total">Total</label>
+                        <label for="total">Total *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -558,13 +558,13 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <label for="date_of_entry">Fecha de ingreso</label>
+                        <label for="date_of_entry">Fecha de ingreso *</label>
                         <div class="inputbox">
                             <input class="form-control" type="date" min="Date()" name="date_of_entry" id="date_of_entry">
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="start_of_contract">Inicio de contrato</label>
+                        <label for="start_of_contract">Inicio de contrato *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -573,7 +573,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="contracted_days">Dias contrato</label>
+                        <label for="contracted_days">Dias contrato *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -582,7 +582,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="day_evaluation">Evaluación 30 días</label>
+                        <label for="day_evaluation">Evaluación 30 días *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -591,7 +591,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="contracted_days_two">Dias contratado</label>
+                        <label for="contracted_days_two">Dias contratado *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -600,7 +600,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
-                        <label for="end_of_contract">Fin de contrato</label>
+                        <label for="end_of_contract">Fin de contrato *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -611,7 +611,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-2">
-                        <label for="antiquity">Antiguedad</label>
+                        <label for="antiquity">Antiguedad *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-calendar-days"></i>
@@ -624,7 +624,7 @@
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <label for="pantry_voucher_two">Vales de despensa</label>
+                        <label for="pantry_voucher_two">Vales de despensa *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -634,7 +634,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="savings_fund_two">Fondo de ahorro</label>
+                        <label for="savings_fund_two">Fondo de ahorro *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -643,7 +643,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="assimilated">Asimilados</label>
+                        <label for="assimilated">Asimilados *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -652,7 +652,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="daily_wage_imss_more_assimilated">Salario diario IMMS + asimilado </label>
+                        <label for="daily_wage_imss_more_assimilated">Salario diario IMMS + asimilado  *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -661,7 +661,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="hc">HC</label>
+                        <label for="hc">HC *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -670,7 +670,7 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="increase_90_days">Incremento 90 días</label>
+                        <label for="increase_90_days">Incremento 90 días *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -678,8 +678,8 @@
                             <input class="form-control input-control" type="text" name="increase_90_days" id="increase_90_days">
                         </div>
                     </div>
-                    <div class="col-md-3">
-                        <label for="vouchers_cct">Vales CCT</label>
+                    <!-- <div class="col-md-3">
+                        <label for="vouchers_cct">Vales CCT *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-dollar-sign"></i>
@@ -688,18 +688,18 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <label for="emple_fapasa_number">N° emple fapasa</label>
+                        <label for="emple_fapasa_number">N° emple fapasa *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-hashtag"></i>
                             </div>
                             <input class="form-control input-control" type="text" name="emple_fapasa_number" id="emple_fapasa_number">
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="row">
                     <div class="col-md-3">
-                        <label for="address">Dirección</label>
+                        <label for="address">Dirección *</label>
                         <div class="inputbox">
                             <div>
                                 <i class="fa-solid fa-location-dot"></i>
@@ -713,7 +713,6 @@
             </div>
             <div class="row row-end">
                 <div class="col-md-4">
-                    <label for="recruiter">Reclutador</label>
                     <div class="inputbox">
                         <div>
                             <i class="fa-solid fa-user"></i>
